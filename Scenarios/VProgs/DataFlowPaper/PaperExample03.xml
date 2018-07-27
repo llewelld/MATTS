@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ComposeComposite>
+  <FileHubChunk type="Options">
+    <Options>
+      <MachineLimit type="int">100</MachineLimit>
+      <StackSize type="long">32000</StackSize>
+      <AllowMinimise type="bool">0</AllowMinimise>
+      <AllowAgents type="bool">0</AllowAgents>
+      <AutoCreate type="bool">1</AutoCreate>
+      <AllowControl type="bool">0</AllowControl>
+      <SelectSpeed type="int">500</SelectSpeed>
+      <ColourSpeed type="int">300</ColourSpeed>
+      <RotateHalfLife type="float">0.100000</RotateHalfLife>
+      <RotateSelected type="bool">1</RotateSelected>
+      <SoundVolume type="float">1.000000</SoundVolume>
+      <ScreenshotMode type="bool">0</ScreenshotMode>
+      <Dandelion type="bool">0</Dandelion>
+      <DandelionServer type="string">localhost</DandelionServer>
+      <RecordViewEvents type="bool">1</RecordViewEvents>
+    </Options>
+  </FileHubChunk>
+  <FileHubChunk type="Topology">
+    <Topology>
+      <Camera theta="4.712389" phi="1.570796" psi="0.000000" radius="6.200000"/>
+      <Node>
+        <Id type="int">0</Id>
+        <Position X="0.880734" Y="-0.628440" Z="-0.221417" />
+        <Name type="string">1</Name>
+        <Type type="enum">1</Type>
+        <SensitivityLevel type="int">4</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=10</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">1</Id>
+        <Position X="1.385321" Y="-0.128440" Z="-0.169711" />
+        <Name type="string">1</Name>
+        <Type type="enum">1</Type>
+        <SensitivityLevel type="int">8</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=10</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">2</Id>
+        <Position X="0.866973" Y="0.371560" Z="-0.260482" />
+        <Name type="string">6</Name>
+        <Type type="enum">6</Type>
+        <SensitivityLevel type="int">4</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=10</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">3</Id>
+        <Position X="0.376147" Y="-0.169725" Z="-0.314184" />
+        <Name type="string">5</Name>
+        <Type type="enum">5</Type>
+        <SensitivityLevel type="int">5</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=10</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">4</Id>
+        <Position X="-0.541284" Y="-0.197248" Z="-0.379431" />
+        <Name type="string">5</Name>
+        <Type type="enum">5</Type>
+        <SensitivityLevel type="int">5</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=10</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">5</Id>
+        <Position X="-1.036697" Y="-0.660550" Z="-0.459412" />
+        <Name type="string">2</Name>
+        <Type type="enum">2</Type>
+        <SensitivityLevel type="int">5</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=8</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">6</Id>
+        <Position X="-1.055046" Y="0.288991" Z="-0.263171" />
+        <Name type="string">3</Name>
+        <Type type="enum">3</Type>
+        <SensitivityLevel type="int">5</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=10</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">7</Id>
+        <Position X="-1.504587" Y="-0.229358" Z="-0.342943" />
+        <Name type="string">4</Name>
+        <Type type="enum">4</Type>
+        <SensitivityLevel type="int">8</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=10</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">8</Id>
+        <Position X="1.857798" Y="-0.114679" Z="-0.103912" />
+        <Name type="string">1</Name>
+        <Type type="enum">1</Type>
+        <SensitivityLevel type="int">4</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=6</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">9</Id>
+        <Position X="0.862385" Y="0.761468" Z="-0.261939" />
+        <Name type="string">6</Name>
+        <Type type="enum">6</Type>
+        <SensitivityLevel type="int">4</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=10</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Link>
+        <OutId type="int">0</OutId>
+        <InId type="int">8</InId>
+        <LinkId type="int">-842150451</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">0</OutId>
+        <InId type="int">1</InId>
+        <LinkId type="int">-842150451</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">1</OutId>
+        <InId type="int">2</InId>
+        <LinkId type="int">-842150451</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">2</OutId>
+        <InId type="int">3</InId>
+        <LinkId type="int">-842150451</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">3</OutId>
+        <InId type="int">0</InId>
+        <LinkId type="int">-842150451</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">3</OutId>
+        <InId type="int">4</InId>
+        <LinkId type="int">-842150451</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">4</OutId>
+        <InId type="int">6</InId>
+        <LinkId type="int">-842150451</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">5</OutId>
+        <InId type="int">4</InId>
+        <LinkId type="int">-842150451</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">6</OutId>
+        <InId type="int">7</InId>
+        <LinkId type="int">-842150451</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">7</OutId>
+        <InId type="int">5</InId>
+        <LinkId type="int">-842150451</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">8</OutId>
+        <InId type="int">9</InId>
+        <LinkId type="int">-842150451</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+    </Topology>
+  </FileHubChunk>
+  <FileHubChunk type="Compose">
+  </FileHubChunk>
+  <FileHubChunk type="Functy">
+    <functy>
+      <range>
+        <min>
+          <coord x="-26.279720" y="-18.333257" z="-150.000000"/>
+        </min>
+        <width>
+          <coord x="46.609600" y="46.609600" z="300.000000"/>
+        </width>
+      </range>
+      <function type="cartesian">
+        <equation>(10*cos((((x+0)**2)+((y+0)**2))**(1/2))/(((((((x+0)**2)+((y+0)**2))**(1/2))**2)/5)+2))+(15*cos((((x+5)**2)+((y+3)**2))**(1/2))/(((((((x+1)**2)+((y+3)**2))**(1/2))**2)/6)+3))+(18*cos((((x-8)**2)+((y+1)**2))**(1/2))/(((((((x-8)**2)+((y-3)**2))**(1/2))**2)/2)+3))+1.5-(((x**2)+(y**2))/200)</equation>
+        <red>0.050+(z/10)</red>
+        <green>0.337+(z/10)</green>
+        <blue>0.000+(z/10)</blue>
+        <alpha>1.000</alpha>
+        <accuracy double="0.008333"/>
+      </function>
+      <function type="cartesian">
+        <equation>(sin(((t)+y+(cos(x)/2))*2.5)/5)</equation>
+        <red>0.5+(0.1*sin(((t/4)+x+(cos(y)/1.7))/0.3))</red>
+        <green>0.681</green>
+        <blue>0.9</blue>
+        <alpha>0.400</alpha>
+        <accuracy double="0.020000"/>
+      </function>
+    </functy>
+  </FileHubChunk>
+  <FileHubChunk type="Timer">
+    <Timer>
+      <Time type="ulong">2368</Time>
+    </Timer>
+  </FileHubChunk>
+</ComposeComposite>

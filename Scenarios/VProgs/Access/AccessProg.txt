@@ -1,0 +1,14 @@
+;---------------------------------------------
+; Program
+	MOV	*data 3
+
+	BEQ	skip *data 3
+	LIB	ReceiveInteger *data 0
+.skip
+
+	LIB	SendInteger *data 0
+	LIB	SendInteger 1 0
+	LIB	SendInteger 1 0
+
+.end
+;---------------------------------------------

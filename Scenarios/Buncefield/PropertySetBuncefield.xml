@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<PropertySet>
+  <Property id="Name" type="string" />
+  <Property id="Type" type="option">
+    <Option enum="1">Unknown</Option>
+    <Option enum="2">Company</Option>
+    <Option enum="3">Government</Option>
+    <Option enum="4">Gold</Option>
+    <Option enum="5">Silver</Option>
+    <Option enum="6">Bronze</Option>
+    <Option enum="7">Ambulance</Option>
+    <Option enum="8">FireEngine</Option>
+    <Option enum="9">Police</Option>
+    <Option enum="10">Fire</Option>
+    <Option enum="11">Water</Option>
+    <Option enum="12">Evaculation</Option>
+    <Option enum="13">None</Option>
+  </Property>
+  <Property id="CommandLevel" type="option">
+    <Option enum="1">Gold</Option>
+    <Option enum="2">Silver</Option>
+    <Option enum="3">Bronze</Option>
+    <Option enum="4">None</Option>
+  </Property>
+  <Property id="Sensitivity" type="int" />
+  <Property id="Authorisation" type="int" />
+  <Property id="Filter" type="bool" />
+</PropertySet>

@@ -1,0 +1,34 @@
+;---------------------------------------------
+; Variables
+.length
+5
+.datapos
+0
+.send0
+0
+.send1
+0
+.receive0
+0
+.receive1
+0
+
+;---------------------------------------------
+; Strings
+.sent
+$Sent on 
+.received
+$Received on 
+.colon
+$: 
+.newline
+$\n
+.dataout0
+$This is some text
+.dataout1
+$This is also text
+.datain0
+$-----------------
+.datain1
+$-----------------
+;---------------------------------------------

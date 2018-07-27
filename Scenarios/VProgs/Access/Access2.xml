@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s2" config="c1">Access control check</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="id1">A particular property</property>
+
+  <configuration id="c1">
+    <component id="c2">
+      <input format=""/>
+      <input id="in1" init="0" format="*"/>
+      <output id="out1" init="0" format="*"/>
+      <component>
+        <input id="in2" init="0" format="*"/>
+        <output id="out2" init="0" format="*" config="c2"/>
+        <output format=""/>
+      </component>
+    </component>
+  </configuration>
+
+  <process id="check" init="0">
+    <process id="stack_pos" init="0" action="@v=0"/>
+    <process id="node_stack" init="0" action="@v=check"/>
+    <process id="link_stack" init="0" action="@v=0"/>
+    <process id="node_visited" init="0" action="@v=0"/>
+    <process id="recurse">
+      <process id="current_node" action="@v=node_stack[stack_pos]"/>
+      <process id="current_link" action="@v=link_stack[stack_pos]"/>
+      <process action="node_visited[current_node]=1"/>
+      <process id="find_link">
+        <process id="next_node" action="@v=@iln[current_node][current_link]"/>
+        <process action="current_link=(current_link+1)"/>
+        <process config="find_link" cond="(current_link &gt;= @ilnum[current_node]) || (node_visited[next_node]=0)"/>
+      </process>
+      <process cond="current_link &lt; @ilnum[current_node]" action="(link_stack[stack_pos]=current_link) && (stack_pos=(stack_pos+1)) && (node_stack[stack_pos]=next_node) && (link_stack[stack_pos]=0" config="recurse"/>
+      <process cond="(current_link &gt;= @ilnum[current_node]) && (stack_pos &gt;= 0)" action="stack_pos=(stack_pos-1) config="recurse"/>
+    </process>
+  </process>
+
+
+
+
+</compose>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISOwqd-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose>
+
+<nothing>
+
+  <sandbox id="s1" config="c1">A sandbox method</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="id1">A perticular property</property>
+  <property id="id2">A perticular property</property>
+
+  <configuration id="c1">
+    <component>
+      <input format="id1" config="c1" cycle="disallow"/>
+      <output format="Any Any" config="c1" cycle="disallow"/>
+    </component>
+    <component>
+      <input format="id2" config="c1" cycle="disallow"/>
+    </component>
+  <configuration>
+
+</compose>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s2" config="c1">Read access control check with slicing</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="idRead">Level of access read by component</property>
+  <property id="idWrite">Level of access written by component</property>
+  <property id="idAuthority">Level of access component is authorised to</property>
+
+  <configuration id="c1" init="1">
+    <component id="c2">
+      <input format=""/>
+      <input id="in1" init="0" format="*"/>
+      <process config="check" action="check=@n"/>
+
+      <output id="out1" init="0" format="*" cond="c1==1"/>
+      <component>
+        <process config="check" action="check=@n"/>
+
+        <input id="in2" init="0" format="*"/>
+        <output id="out2" init="0" format="*" config="c2" follow="fresh" cond="c1==1"/>
+        <output format="" cond="c1==1"/>
+      </component>
+    </component>
+  </configuration>
+
+  <process id="check" init="0">
+    <process id="result" init="0" action="@v=(0-1)"/>
+    <process id="stack_pos" init="0" action="@v=0"/>
+    <process id="node_stack" init="0" action="@v=check"/>
+    <process id="link_in" init="0" action="@v=(0-1)"/>
+    <process id="link_out" init="0" action="@v=0"/>
+
+    <process id="recurse">
+      <process id="current_node" init="0" action="@v=node_stack[stack_pos]"/>
+      <process id="current_link_in" init="0" action="@v=link_in[stack_pos]"/>
+      <process id="current_link_out" init="0" action="@v=link_out[(2 + current_link_in + (8 * current_node))]"/>
+
+      <process config="recurse" cond="(current_link_out &lt; @olnum[current_node]) &amp;&amp; (link_out[(2 + @olil[current_node][current_link_out] + (8 * @oln[current_node][current_link_out]))] &lt; @olnum[@oln[current_node][current_link_out]])" action="(stack_pos = (stack_pos + 1)) + (node_stack[stack_pos] = @oln[current_node][current_link_out]) + (link_in[stack_pos] = @olil[current_node][current_link_out]) + (link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1))"/>
+
+      <process config="recurse" cond="(current_link_out &gt;= @olnum[current_node]) &amp;&amp; (stack_pos &gt; 0)" action="(link_out[(2 + current_link_in + (8 * current_node))] = 0) + (stack_pos = (stack_pos - 1))"/>
+
+    </process>
+  </process>
+
+
+
+
+</compose>

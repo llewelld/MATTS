@@ -1,0 +1,18 @@
+; Start of program
+
+;---------------------------------------------
+; Initialise
+
+.SendLoop
+	LIB	ReceiveInteger *add1 0
+	LIB	ReceiveInteger *add2 1
+
+	ADD	*count *add1 *add2
+	LIB	SendInteger *count 0
+
+	BEQ	SendLoop 0 0
+
+;---------------------------------------------
+; The program ends here
+.End
+; End of program

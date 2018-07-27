@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="Generic" config="c1">Check all nodes satisfy some property</sandbox>
+  <property id="Any">Defined to be any property</property>
+
+  <configuration id="c1">
+    <component>
+      <process id="result" init="0" action="@a[@n][IDS]"/>
+      <process id="ok" init="0" action="ok = (result == 1)"/>
+
+      <input format=""/>
+      <input format="*"/>
+      <output format="" cond="ok == 1"/>
+      <output format="*" config="c1" cond="ok == 1"/>
+    </component>
+  </configuration>
+
+</compose>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose>
+
+  <sandbox id="s1" config="c1">A sandbox method</sandbox>
+  <sandbox id="s2" config="c3">A sandbox method</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="id1">A particular property</property>
+  <property id="id2">A particular property</property>
+
+  <configuration id="c1">
+    <component id="c2">
+      <input format="id5" cycle="required"/>
+      <input format=""/>
+      <output format="id1 id1"/>
+      <output format="id1 id2"/>
+      <component>
+        <input format="id1" cycle="disallow"/>
+	<output format =""/>
+	<output format ="id2" config="c3"/>
+      </component>
+      <component>
+        <input format="id4"/>
+        <output format ="id5" cycle="disallow"/>
+        <component>
+          <input format="id5"/>
+          <output format ="id5" config="c1" cycle="required"/>
+        </component>
+      </component>
+    </component>
+    <component id="c3">
+      <component>
+        <input format="id2"/>
+        <input format="id2 id2"/>
+        <output format ="id3" config="c3"/>
+        <output format =""/>
+      </component>
+    </component>
+  <configuration>
+
+</compose>

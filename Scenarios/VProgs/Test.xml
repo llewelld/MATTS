@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s1" config="c1">Test any</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="id1">A particular property</property>
+
+  <configuration id="c1">
+    <component id="c2">
+      <input format=""/>
+      <input id="in1" init="0 1 2 3 4" format="*"/>
+      <output id="out1" init="0" format="*" config="c1" action="in1[3]=5" cond="in1[0]==0"/>
+      <output format=""/>
+    </component>
+  </configuration>
+
+</compose>

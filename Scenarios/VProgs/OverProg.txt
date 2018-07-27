@@ -1,0 +1,21 @@
+; Start of program
+
+;---------------------------------------------
+; Initialise
+	LIB	HeapAlloc *heap 3
+	LIB	HeapAlloc *heapcopy 10
+	SUB	*heap *heap 1
+;---------------------------------------------
+; Main loop
+.ReceiveLoop
+	ADD	*heap *heap 1
+	LIB	ReceiveInteger **heap 0
+	ADD	**heapcopy **heap 9
+	LIB	PrintNumber **heap
+	LIB	PrintNumber **heapcopy
+	BNE	ReceiveLoop **heap 0
+
+;---------------------------------------------
+; The program ends here
+.End
+; End of program

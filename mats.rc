@@ -1,0 +1,610 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        POPUP "Open"
+        BEGIN
+            MENUITEM "Project...",                  ID_FILE_LOAD
+            MENUITEM "Scenery...",                  ID_SCENE_LOAD
+            MENUITEM "Default Property Set...",     ID_OPENDEFAULTPROPERTYSET
+            MENUITEM "Analysis Script...",          ID_TOPOLOGY_LOADXML
+        END
+        MENUITEM "Save Project...",             ID_FILE_SAVE_TOPOLOGY
+        POPUP "Scene"
+        BEGIN
+            MENUITEM "Tron",                        ID_SCENE_TRON
+            MENUITEM "LJMU Map",                    ID_SCENE_JMUMAP
+            MENUITEM "Liverpool Landmarks",         ID_SCENE_LANDMARKS
+            MENUITEM "St John Centre",              ID_SCENE_STJOHN
+        END
+        MENUITEM "Options...",                  ID_VIEW_OPTIONS
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Select",                      ID_VIEW_SELECT
+        MENUITEM "Rotate",                      ID_VIEW_ROTATE
+        MENUITEM "Run Server",                  ID_VIEW_RUNSERVER
+        MENUITEM "Stop Server",                 ID_VIEW_STOPSERVER
+        POPUP "Create Node"
+        BEGIN
+            MENUITEM "Hospital",                    ID_VIEW_CREATE_HOSPITAL
+            MENUITEM "Police",                      ID_VIEW_CREATE_POLICE
+            MENUITEM "Bank",                        ID_VIEW_CREATE_BANK
+            MENUITEM "Event Organiser",             ID_VIEW_CREATE_EVENT
+            MENUITEM "Mobile Operaotr",             ID_VIEW_CREATE_MOBILE
+            MENUITEM "Rescue Team",                 ID_VIEW_CREATE_RESCUE
+            MENUITEM "Fire Service",                ID_VIEW_CREATE_FIRE
+            MENUITEM "Ambulance Service",           ID_VIEW_CREATE_AMBULANCE
+            MENUITEM "Dept of Transport",           ID_VIEW_CREATE_TRANSPORT
+            MENUITEM "External",                    ID_VIEW_CREATE_EXTERNAL
+        END
+        MENUITEM "Create Link",                 ID_VIEW_CREATELINK
+        MENUITEM "Spin",                        ID_VIEW_SPIN
+        MENUITEM "Overlay",                     ID_VIEW_OVERLAY
+        MENUITEM "Network View",                ID_VIEW_RENDERTYPE
+        MENUITEM "Full Screen",                 ID_FULLSCREEN
+    END
+    POPUP "Topology"
+    BEGIN
+        MENUITEM "Set Properties...",           ID_PROPERTIES
+        MENUITEM "Load Propert Set...",         ID_PROPERTYSET
+        MENUITEM "Close Machine",               ID_CURRENTMACHINE_CLOSEMACHINE
+        MENUITEM "Delete Link",                 ID_TOPOLOGY_DELETELINK
+        MENUITEM "Delete Node",                 ID_TOPOLOGY_DELETENODE
+        MENUITEM "Assign Data...",              ID_TOPOLOGY_ASSIGNDATA
+        MENUITEM "Send Data...",                ID_TOPOLOGY_SENDDATA
+        MENUITEM "Manage Data...",              ID_TOPOLOGY_MANAGEDATA
+        MENUITEM SEPARATOR
+        MENUITEM "Analyse Topology",            ID_TOPOLOGY_ANALYSETOPOLOGY
+        MENUITEM "Analyse Component",           ID_TOPOLOGY_ANALYSE
+        MENUITEM "Show Results",                ID_TOPOLOGY_SHOWRESULTS
+        MENUITEM "Reset",                       ID_TOPOLOGY_SHOWRESULTS
+    END
+    POPUP "Program"
+    BEGIN
+        MENUITEM "Open Console",                ID_VIEW_OPENCONSOLE
+        MENUITEM "Petrify All",                 ID_TOPOLOGY_PETRIFY
+        MENUITEM "Reanimate All",               ID_TOPOLOGY_REANIMATE
+        MENUITEM SEPARATOR
+        MENUITEM "Load Program...",             ID_CURRENTMACHINE_LOADPROGRAM
+        MENUITEM "Save Program...",             ID_CURRENTMACHINE_SAVEPROGRAM
+        MENUITEM "Pause Program",               ID_CURRENTMACHINE_PAUSEPROGRAM
+        MENUITEM "End Program",                 ID_CURRENTMACHINE_ENDPROGRAM
+    END
+    POPUP "Events"
+    BEGIN
+        MENUITEM "Event list",                  ID_EVENTS_SHOWEVENTLIST
+        MENUITEM "Reset time",                  ID_EVENTS_RESETTIME
+        MENUITEM "Clear and Reset",             ID_EVENTS_RESETCLEAR
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Contents",                    ID_HELP_CONTENTS
+        MENUITEM "About",                       ID_HELP_ABOUT
+        MENUITEM "Policy",                      ID_HELP_POLICY
+    END
+END
+
+IDR_MENU2 MENU 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "Show",                        ID_MENU_SHOW
+        MENUITEM "About",                       ID_MENU_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_MENU_EXIT
+    END
+END
+
+IDR_MENU3 MENU 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        POPUP "File"
+        BEGIN
+            POPUP "Open"
+            BEGIN
+                MENUITEM "Project...",                  ID_FILE_LOAD
+                MENUITEM "Scene...",                    ID_SCENE_LOAD
+                MENUITEM "Default Property Set...",     ID_OPENDEFAULTPROPERTYSET
+                MENUITEM "Analysis Script...",          ID_TOPOLOGY_LOADXML
+            END
+            MENUITEM "Save Project...",             ID_FILE_SAVE_TOPOLOGY
+            POPUP "Scene"
+            BEGIN
+                MENUITEM "Tron",                        ID_SCENE_TRON
+                MENUITEM "LJMU Map",                    ID_SCENE_JMUMAP
+                MENUITEM "Liverpool Landmarks",         ID_SCENE_LANDMARKS
+                MENUITEM "St John Centre",              ID_SCENE_STJOHN
+            END
+            MENUITEM "Options...",                  ID_VIEW_OPTIONS
+            MENUITEM "Exit",                        ID_FILE_EXIT
+        END
+        POPUP "Tools"
+        BEGIN
+            MENUITEM "Select",                      ID_VIEW_SELECT
+            MENUITEM "Rotate",                      ID_VIEW_ROTATE
+            MENUITEM "Run Server",                  ID_VIEW_RUNSERVER
+            MENUITEM "Stop Server",                 ID_VIEW_STOPSERVER
+            POPUP "Create Node"
+            BEGIN
+                MENUITEM "Hospital",                    ID_VIEW_CREATE_HOSPITAL
+                MENUITEM "Police",                      ID_VIEW_CREATE_POLICE
+                MENUITEM "Bank",                        ID_VIEW_CREATE_BANK
+                MENUITEM "Event Organiser",             ID_VIEW_CREATE_EVENT
+                MENUITEM "Mobile Operaotr",             ID_VIEW_CREATE_MOBILE
+                MENUITEM "Rescue Team",                 ID_VIEW_CREATE_RESCUE
+                MENUITEM "Fire Service",                ID_VIEW_CREATE_FIRE
+                MENUITEM "Ambulance Service",           ID_VIEW_CREATE_AMBULANCE
+                MENUITEM "Dept of Transport",           ID_VIEW_CREATE_TRANSPORT
+                MENUITEM "External",                    ID_VIEW_CREATE_EXTERNAL
+            END
+            MENUITEM "Create Link",                 ID_VIEW_CREATELINK
+            MENUITEM "Spin",                        ID_VIEW_SPIN
+            MENUITEM "Overlay",                     ID_VIEW_OVERLAY
+            MENUITEM "Network View",                ID_VIEW_RENDERTYPE
+            MENUITEM "Full Screen",                 ID_FULLSCREEN
+        END
+        POPUP "Topology"
+        BEGIN
+            MENUITEM "Set Properties...",           ID_PROPERTIES
+            MENUITEM "Load Properties Set...",      ID_PROPERTYSET
+            MENUITEM "Close Machine",               ID_CURRENTMACHINE_CLOSEMACHINE
+            MENUITEM "Delete Link",                 ID_TOPOLOGY_DELETELINK
+            MENUITEM "Delete Node",                 ID_TOPOLOGY_DELETENODE
+            MENUITEM "Assign Data...",              ID_TOPOLOGY_ASSIGNDATA
+            MENUITEM "Send Data...",                ID_TOPOLOGY_SENDDATA
+            MENUITEM "Manage Data...",              ID_TOPOLOGY_MANAGEDATA
+            MENUITEM SEPARATOR
+            MENUITEM "Analyse Topology",            ID_TOPOLOGY_ANALYSETOPOLOGY
+            MENUITEM "Analyse Component",           ID_TOPOLOGY_ANALYSE
+            MENUITEM "Show Results",                ID_TOPOLOGY_SHOWRESULTS
+            MENUITEM "Reset",                       ID_TOPOLOGY_SHOWRESULTS
+        END
+        POPUP "Program"
+        BEGIN
+            MENUITEM "Open Console",                ID_VIEW_OPENCONSOLE
+            MENUITEM "Petrify All",                 ID_TOPOLOGY_PETRIFY
+            MENUITEM "Reanimate All",               ID_TOPOLOGY_REANIMATE
+            MENUITEM SEPARATOR
+            MENUITEM "Load Program...",             ID_CURRENTMACHINE_LOADPROGRAM
+            MENUITEM "Save Program...",             ID_CURRENTMACHINE_SAVEPROGRAM
+            MENUITEM "Pause Program",               ID_CURRENTMACHINE_PAUSEPROGRAM
+            MENUITEM "End Program",                 ID_CURRENTMACHINE_ENDPROGRAM
+        END
+        POPUP "Events"
+        BEGIN
+            MENUITEM "Event List",                  ID_EVENTS_SHOWEVENTLIST
+            MENUITEM "Reset Time",                  ID_EVENTS_RESETTIME
+            MENUITEM "Clear and Reset",             ID_EVENTS_RESETCLEAR
+        END
+        POPUP "Help"
+        BEGIN
+            MENUITEM "Contents",                    ID_HELP_CONTENTS
+            MENUITEM "About",                       ID_HELP_ABOUT
+            MENUITEM "Policy",                      ID_HELP_POLICY
+        END
+    END
+END
+
+IDR_MENU4 MENU 
+BEGIN
+    POPUP "Current Node"
+    BEGIN
+        MENUITEM "Clear Buffer",                ID_CURRENTMACHINE_CLEARCONSOLE
+        MENUITEM "Clear TabVM",                 ID_CURRENTMACHINE_CLEARVM
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ID_ABOUT DIALOGEX 100, 100, 258, 206
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About MATTS"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,102,181,150,14
+    LTEXT           "Static",IDC_ABOUT,85,17,167,12
+    GROUPBOX        "Static",IDC_SYSTEM,77,66,175,47
+    GROUPBOX        "Static",IDC_MACHINES,77,120,175,47
+    LTEXT           "Static",IDC_VERSION,85,28,129,10
+    LTEXT           "Static",IDC_DESC,85,42,167,17
+    LTEXT           "total mem",IDC_TOTALMEM,83,79,160,9
+    LTEXT           "memory free",IDC_MEMFREE,83,95,157,8
+    LTEXT           "number machines",IDC_NUMMACHINES,83,131,161,12
+    LTEXT           "machine memory",IDC_MACHINEMEM,83,147,160,10
+    CONTROL         118,IDC_LOGO,"Static",SS_BITMAP | SS_REALSIZEIMAGE,7,16,64,182
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 237, 246
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,100,226,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,181,226,50,14
+    CONTROL         "Minimise to tray",IDC_MIN,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,28,17,66,10
+    CONTROL         "Sound",IDC_SOUND,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,187,17,36,10
+    EDITTEXT        IDC_MACNUM,66,53,28,12,ES_AUTOHSCROLL | ES_WANTRETURN | ES_NUMBER
+    EDITTEXT        IDC_STACK,66,67,28,12,ES_AUTOHSCROLL | ES_WANTRETURN | ES_NUMBER
+    CONTROL         "Allow incoming",IDC_ALLOW,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,161,54,62,10
+    CONTROL         "Auto-create machine",IDC_CREATE,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,140,69,83,10
+    CONTROL         "Remote control",IDC_CONTROL,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,158,84,65,10
+    EDITTEXT        IDC_SELSPEED,66,120,28,12,ES_AUTOHSCROLL | ES_WANTRETURN | ES_NUMBER
+    EDITTEXT        IDC_COLSPEED,66,135,28,12,ES_AUTOHSCROLL | ES_WANTRETURN | ES_NUMBER
+    EDITTEXT        IDC_HALFLIFE,66,151,28,12,ES_AUTOHSCROLL | ES_WANTRETURN
+    CONTROL         "Rotate to selected",IDC_ROTATESEL,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,150,119,73,14
+    CONTROL         "Screenshot mode",IDC_SCREENSHOT,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,150,135,73,14
+    CONTROL         "Dandelion server",IDC_DANDELION,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,24,172,70,10
+    EDITTEXT        IDC_DANDESERVER,100,171,123,12,ES_AUTOHSCROLL | ES_WANTRETURN | WS_DISABLED
+    LTEXT           "Max machines",IDC_STATIC,20,56,46,8,0,WS_EX_RIGHT
+    GROUPBOX        "Agents",IDC_STATIC,6,41,225,61
+    LTEXT           "Machine stack",IDC_STATIC,20,69,46,8,0,WS_EX_RIGHT
+    LTEXT           "KB (1-100)",IDC_STATIC,100,69,35,8
+    LTEXT           "(Applies to new machines)",IDC_STATIC,34,84,85,8
+    LTEXT           "(1-100)",IDC_STATIC,100,54,25,8
+    LTEXT           "Select speed",IDC_STATIC,24,122,42,8,0,WS_EX_RIGHT
+    LTEXT           "ms",IDC_STATIC,100,122,10,8
+    LTEXT           "Colour speed",IDC_STATIC,23,137,43,8,0,WS_EX_RIGHT
+    LTEXT           "ms",IDC_STATIC,100,138,10,8
+    LTEXT           "Rotate halflife",IDC_STATIC,20,154,46,8,0,WS_EX_RIGHT
+    GROUPBOX        "Topology view",IDC_STATIC,6,109,225,81
+    GROUPBOX        "General",IDC_STATIC,6,6,225,28
+    GROUPBOX        "Events",IDC_STATIC,6,197,225,25
+    CONTROL         "Record view events",IDC_VIEWEVENTS,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,15,206,79,10
+END
+
+IDD_CHANNELS DIALOGEX 0, 0, 143, 133
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Link properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_OUTCHANNEL,75,4,64,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_INCHANNEL,75,20,64,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_OUTPROPERTY,75,40,64,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INPROPERTY,75,56,64,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INOUTSEC,75,75,64,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,90,113,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,1,113,50,14
+    RTEXT           "Output channel",IDC_STATIC,22,8,50,8
+    RTEXT           "Input channel",IDC_STATIC,27,24,45,8
+    RTEXT           "Output property ID",IDC_STATIC,10,43,63,8
+    RTEXT           "Input property ID",IDC_STATIC,15,59,58,8
+    RTEXT           "Security",IDC_STATIC,45,78,27,8
+    LTEXT           "Sensitivity Level",IDC_STATIC,21,98,52,8
+    LTEXT           "Static",IDC_SLCHANNEL,97,97,41,8
+END
+
+IDD_CHECKRESULT DIALOGEX 100, 48, 202, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Checking results"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,150,33,50,13
+    LISTBOX         IDC_LIST1,2,2,198,30,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+END
+
+IDD_NODEPROPS DIALOGEX 0, 0, 203, 324
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Node properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_NODECERTPROPS,92,184,99,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_NODESECMAX,92,98,51,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_NODESECMIN,92,115,51,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    DEFPUSHBUTTON   "OK",IDOK,70,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,143,73,50,14
+    EDITTEXT        IDC_NODEID,92,6,99,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    RTEXT           "Node ID",IDC_LABEL,57,10,27,8
+    RTEXT           "Node property ID",IDC_STATIC,27,188,57,8,NOT WS_VISIBLE
+    RTEXT           "Security max",IDC_STATIC,42,101,42,8,NOT WS_VISIBLE
+    RTEXT           "Security min",IDC_STATIC,44,118,40,8,NOT WS_VISIBLE
+    CONTROL         "Firewall",IDC_CHECK_FIREWALL,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | NOT WS_VISIBLE | WS_TABSTOP,151,117,40,10
+    CONTROL         "IDS",IDC_CHECK_IDS,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | NOT WS_VISIBLE | WS_TABSTOP,164,100,27,10
+    RTEXT           "Encryption algorithm",IDC_STATIC,18,152,66,8,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_EA,92,150,51,164,CBS_DROPDOWN | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Staff skills",IDC_STATIC,51,171,33,8,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_SS,92,167,51,139,CBS_DROPDOWN | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Sensitivity level",IDC_STATIC,34,135,50,8,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_SL,92,133,51,250,CBS_DROPDOWN | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_NODENAME,92,23,99,14,ES_AUTOHSCROLL
+    RTEXT           "Name",IDC_STATIC,65,25,19,8
+    CONTROL         "External",IDC_CHECK_EXTERNAL,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | NOT WS_VISIBLE | WS_TABSTOP,148,134,43,10
+    CONTROL         "",IDC_SLIDER_ADHOCTX,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,120,41,71,11
+    CONTROL         "Ad hoc",IDC_CHECK_ADHOC,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,6,41,38,10
+    RTEXT           "Range Tx",IDC_STATIC,52,41,32,8
+    EDITTEXT        IDC_ADHOCRX,92,55,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "Range Rx",IDC_STATIC,52,57,32,8
+    CONTROL         "",IDC_SLIDER_ADHOCRX,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,120,55,71,11
+    EDITTEXT        IDC_TEMPLATESTRING,92,230,99,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_TEMPLATEINT,92,250,51,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    CONTROL         "",IDC_TEMPLATEBOOL,"Button",BS_AUTOCHECKBOX | BS_LEFT | NOT WS_VISIBLE | WS_TABSTOP,92,287,16,10
+    EDITTEXT        IDC_ADHOCTX,92,39,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_TEMPLATEFLOAT,92,268,51,14,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_VISIBLE
+    COMBOBOX        IDC_TEMPLATEOPTION,92,302,51,164,CBS_DROPDOWN | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Node ID",IDC_TEMPLATELABEL,6,232,78,8,NOT WS_VISIBLE
+END
+
+IDD_POLICY DIALOGEX 0, 0, 299, 236
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Policy of MATTS"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,128,215,50,14
+    GROUPBOX        "Policy explanation for Boundary check",IDC_POLICY1,20,24,261,184
+    LTEXT           "Static",IDC_POLICY2,23,37,250,164
+END
+
+IDD_ASSIGNDATA DIALOGEX 0, 0, 257, 212
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Assign Data to Node"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,105,191,50,14
+    LISTBOX         IDC_AVAILABLEDATA,7,33,93,123,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_ASSIGNEDDATA,156,33,94,122,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_ADDDATA,30,159,50,14
+    PUSHBUTTON      "Remove",IDC_REMOVEDATA,183,156,50,14
+    LTEXT           "--------->",IDC_STATIC,111,81,30,8
+    LTEXT           "<--------",IDC_STATIC,112,96,28,8
+    LTEXT           "Data Available",IDC_STATIC,29,19,47,8
+    LTEXT           "Data Assigned",IDC_STATIC,178,19,47,8
+END
+
+IDD_SENDDATA DIALOGEX 0, 0, 186, 106
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Send Data"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,34,76,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,113,76,50,14
+    LTEXT           "Choose File",IDC_STATIC,20,18,38,8
+    LTEXT           "Send to",IDC_STATIC,25,44,26,8
+    COMBOBOX        IDC_FILELIST,87,16,84,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_NODELIST,87,42,85,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_MANAGEDATA DIALOGEX 0, 0, 267, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Data Management"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,105,202,50,14
+    LISTBOX         IDC_DATAINXML,25,26,85,162,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Update",IDC_MODIFY_DATA,201,122,50,14
+    PUSHBUTTON      "Add",IDC_ADD_DATA,171,76,50,14
+    GROUPBOX        "Add New File",IDC_STATIC,128,18,132,79
+    GROUPBOX        "Update SL of Slelcted File",IDC_STATIC,128,105,132,43
+    COMBOBOX        IDC_COMBO_UPDATESL,141,122,48,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_FILENAME,179,31,73,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_ADDSL,204,52,48,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "File Name",IDC_STATIC,143,34,32,8
+    LTEXT           "Sensitivity Level",IDC_STATIC,141,55,52,8
+    LTEXT           "Existing File (SL)",IDC_STATIC,38,7,53,8
+    GROUPBOX        "Delete Selected File",IDC_STATIC,128,155,132,32
+    PUSHBUTTON      "Delete",IDC_DELETE_DATA,171,166,50,14
+END
+
+IDD_EVENTLIST DIALOGEX 300, 48, 160, 201
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Event list"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,106,186,50,13
+    CONTROL         "",IDC_EVENTLIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,2,7,154,179
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN                ICON                    "MATS.ico"
+IDI_SMINACTIVE          ICON                    "MATSsmInactive.ico"
+IDI_SMACTIVE            ICON                    "MATSsmActive.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "logo.bmp"
+IDR_TOOLBAR1            BITMAP                  "toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BUTTON_SELECT
+    SEPARATOR
+    BUTTON      ID_BUTTON_CREATELINK
+    BUTTON      ID_BUTTON_SPIN
+    BUTTON      ID_BUTTON_SHOWINFO
+    SEPARATOR
+    BUTTON      ID_BUTTON_ROTATE
+    BUTTON      ID_BUTTON_POINTTOSELECTED
+    BUTTON      ID_BUTTON_CREATE_HOSPITAL
+    BUTTON      ID_BUTTON_CREATE_POLICE
+    SEPARATOR
+    BUTTON      ID_BUTTON_CREATE_BANK
+    BUTTON      ID_BUTTON_CREATE_EVENT
+    BUTTON      ID_BUTTON_CREATE_MOBILE
+    BUTTON      ID_BUTTON_CREATE_RESCUE
+    BUTTON      ID_BUTTON_CREATE_FIRE
+    BUTTON      ID_BUTTON_CREATE_AMBULANCE
+    BUTTON      ID_BUTTON_CREATE_TRANSPORT
+    BUTTON      ID_BUTTON_EXTERNAL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDR_SOUNDSHORTBEEP      WAVE                    "Resources\\ShortBeep.wav"
+IDR_SOUNDMEDIUMBEEP     WAVE                    "Resources\\MediumBeep.wav"
+IDR_SOUNDCREATENODE     WAVE                    "Resources\\CreateNode.wav"
+IDR_SOUNDCREATELINK     WAVE                    "Resources\\CreateLink.wav"
+IDR_SOUNDLONGBEEP       WAVE                    "Resources\\LongBeep.wav"
+IDR_STARTUP             WAVE                    "Resources\\StartUp.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 231
+        VERTGUIDE, 66
+        VERTGUIDE, 94
+        VERTGUIDE, 100
+        VERTGUIDE, 223
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 240
+        HORZGUIDE, 27
+    END
+
+    IDD_CHANNELS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_NODEPROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 197
+        VERTGUIDE, 84
+        VERTGUIDE, 92
+        VERTGUIDE, 120
+        VERTGUIDE, 143
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 318
+    END
+
+    IDD_SENDDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_MANAGEDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_EVENTLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+        HORZGUIDE, 186
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

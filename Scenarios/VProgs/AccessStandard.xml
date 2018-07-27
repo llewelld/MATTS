@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s2" config="c1">Access control check</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="id1">A particular property</property>
+
+  <configuration id="c1">
+    <component id="c2">
+      <input format=""/>
+      <input id="in1" init="0" format="*"/>
+      <output id="out1" init="0" format="*"/>
+      <component>
+        <process config="check"/>
+        <input id="in2" init="0" format="*" cond="@v==1"/>
+        <output id="out2" init="0" format="*" config="c2"/>
+        <output format=""/>
+      </component>
+    </component>
+  </configuration>
+
+  <process id="check" init="2">
+    <process action="link=0"/>
+    <process action="in2=1"/>
+    <process id="link" init="0">
+      <process id="result_in" init="0" cond="link &lt; @ilnum[@n]" action="@ai[@n][link][id3]">
+        <process id="result_out" init="0" action="@ao[@iln[@n][link]][@ilol[@n][link]][id3]"/>
+        <process action="in2=0" cond="(result_in[link] &lt;= check) || (result_out[@ilol[@n][link]] &lt;= check)"/>
+        <process action="link=(link+1)"/>
+        <process config="link"/>
+      </process>
+    </process>
+  </process>
+
+</compose>

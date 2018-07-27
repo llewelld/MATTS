@@ -1,0 +1,16 @@
+; Start of program
+
+;---------------------------------------------
+; Initialise
+
+.ReceiveLoop
+	LIB	ReceiveInteger *count 0
+	LIB	PrintString text
+	LIB   PrintNumber *count
+
+	BEQ	ReceiveLoop 0 0
+
+;---------------------------------------------
+; The program ends here
+.End
+; End of program

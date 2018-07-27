@@ -1,0 +1,6 @@
+XMLPlatformUtils::fgMemoryManager
+
+= (XMLCh*) XMLPlatformUtils::fgMemoryManager->allocate (1024 * sizeof(XMLCh))
+
+XMLPlatformUtils::fgMemoryManager->deallocate (xszSubString);
+

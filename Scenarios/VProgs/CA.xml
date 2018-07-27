@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s1" config="c3">Binary tree</sandbox>
+  <sandbox id="s2" config="c6">Composable Assurance</sandbox>
+  <sandbox id="s3" config="c11">Non-Interferance</sandbox>
+
+  <property id="CA">Composable Assurance</property>
+  <property id="id1">Stronger security property</property>
+  <property id="Any">Any property</property>
+  <property id="NI">Non-Interferance</property>
+
+  <configuration id="c3">
+    <component id="c4">
+      <input format=""/>
+      <output format="id1 id1" cycle="disallow"/>
+      <component id="c5">
+        <input format="id1" cycle="disallow"/>
+        <output config="c4" format="id1 id1" cycle="disallow"/>
+        <output format=""/>
+      </component>
+    </component>
+  </configuration>
+
+  <configuration id="c8">
+    <component id="c9">
+      <input format=""/>
+      <output format="*" cycle="disallow"/>
+      <component>
+        <input format="*" cycle="disallow"/>
+        <output config="c9" format="*" cycle="disallow"/>
+        <output format=""/>
+        <output format="CA*" cycle="disallow"/>
+        <component>
+          <input format="CA*" cycle="disallow"/>
+          <output format="external"/>
+        </component>
+      </component>
+    </component>
+  </configuration>
+
+  <configuration id="c10">
+    <component>
+      <input format="*" cycle="disallow"/>
+      <output config="c10" format="*" cycle="disallow"/>
+      <output format=""/>
+      <output format="*" cycle="disallow"/>
+    </component>
+    <component>
+      <input format="CA*" cycle="disallow"/>
+      <output format="external"/>
+    </component>
+  </configuration>
+
+  <configuration id="c6">
+    <component id="c7">
+      <input format="" cycle="disallow"/>
+      <output format="CA*" cycle="disallow"/>
+      <component>
+        <input format="CA*" cycle="disallow"/>
+        <output config="c7" format="CA*" cycle="disallow"/>
+        <output format=""/>
+        <output config="c7" format="*" cycle="disallow"/>
+      </component>
+      <component>
+        <input format="id1*" cycle="disallow"/>
+        <output format="external"/>
+      </component>
+    </component>
+  </configuration>
+
+
+  <configuration id="c11">
+    <component id="c12">
+      <input format=""/>
+      <output format="NI*"/>
+      <component>
+        <input format="NI*"/>
+        <output config="c12" format="NI*"/>
+        <output format=""/>
+        <output format="external"/>
+      </component>
+    </component>
+  </configuration>
+
+
+
+</compose>

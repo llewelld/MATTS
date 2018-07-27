@@ -1,0 +1,30 @@
+<!ENTITY % actparams	"id		ID		#IMPLIED
+				init		CDATA		#IMPLIED
+				cond		CDATA		#IMPLIED
+				action	CDATA		#IMPLIED">
+<!ENTITY % ioparams	"%actparams;
+				config	IDREF	#IMPLIED">
+<!ENTITY % fullparams	"%ioparams;
+				format	CDATA	#IMPLIED
+				cycle		(required | disallow | optional)	'optional'
+				follow	(yes | no | fresh)			'fresh'">
+
+<!ELEMENT compose		ANY>
+<!ELEMENT sandbox		(#PCDATA)>
+<!ELEMENT property	(#PCDATA)>
+<!ELEMENT configuration	(component)*>
+<!ELEMENT component	(input | output | component | process)*>
+<!ELEMENT input		EMPTY>
+<!ELEMENT output		EMPTY>
+<!ELEMENT process		(process)*>
+
+<!ATTLIST compose		xmlns		CDATA		#FIXED			"http://www.cms.livjm.ac.uk/PUCsec/compose"
+				type		(standard | extended)			"standard">
+<!ATTLIST sandbox		id		ID		#REQUIRED
+				config	IDREFS	#REQUIRED>
+<!ATTLIST property	id		ID		#REQUIRED>
+<!ATTLIST configuration	id		ID		#REQUIRED>
+<!ATTLIST component	%actparams;>
+<!ATTLIST input		%fullparams;>
+<!ATTLIST output		%fullparams;>
+<!ATTLIST process		%ioparams;>

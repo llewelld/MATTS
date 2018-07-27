@@ -1,0 +1,20 @@
+; Start of program
+
+;---------------------------------------------
+; Initialise
+	AND	*temp *input 47
+	BNE	fail *temp 47
+	MOV	*mempos temp
+	AND	**mempos *input 208
+	BEQ	okay *temp 208
+	BEQ	fail 0 0
+.okay
+	MOV	*input 1
+	BLT	end 1 2
+.fail
+	MOV	*input 0
+
+;---------------------------------------------
+; The program ends here
+.end
+; End of program

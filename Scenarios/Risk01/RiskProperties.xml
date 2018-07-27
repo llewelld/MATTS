@@ -1,0 +1,11 @@
+<PropertyDetails>
+  <PropertySet>
+    <Property id="Asset Value" type="option">
+      <Option enum="1">High</Option>
+      <Option enum="2">Medium</Option>
+      <Option enum="3">Low</Option>
+      Medium
+    </Property>
+    <Property id="Risk Level" type="float">0.0</Property>
+  </PropertySet>
+</PropertyDetails>

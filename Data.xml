@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Data>
+
+  <File>
+    <Name>.svn</Name>
+    <SensitivityLevel>2</SensitivityLevel>
+  </File>
+
+  <File>
+    <Name>5Venue.txt</Name>
+    <SensitivityLevel>6</SensitivityLevel>
+  </File>
+
+  <File>
+    <Name>dds.cs</Name>
+    <SensitivityLevel>4</SensitivityLevel>
+  </File>
+
+  <File>
+    <Name>File.txt</Name>
+    <SensitivityLevel>3</SensitivityLevel>
+  </File>
+
+  <File>
+    <Name>local map.jpg</Name>
+    <SensitivityLevel>3</SensitivityLevel>
+  </File>
+
+  <File>
+    <Name>Memo.psw</Name>
+    <SensitivityLevel>4</SensitivityLevel>
+  </File>
+
+  <File>
+    <Name>personal info.txt</Name>
+    <SensitivityLevel>5</SensitivityLevel>
+  </File>
+
+  <File>
+    <Name>Test1</Name>
+    <SensitivityLevel>6</SensitivityLevel>
+  </File>
+
+  <File>
+    <Name>Test2</Name>
+    <SensitivityLevel>3</SensitivityLevel>
+  </File>
+
+  <File>
+    <Name>Venue.jpg</Name>
+    <SensitivityLevel>6</SensitivityLevel>
+  </File>
+
+</Data>

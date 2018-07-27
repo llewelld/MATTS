@@ -1,0 +1,712 @@
+LogFile.txt
+
+      ****** Current component is 0 ******
+Node
+<component id="c2">
+
+Process node
+<process action="check=@n" config="check">
+Applying action
+check=@n
+Resolution: @n = 0
+Assignment: check = 0
+
+Process node
+<process action="@v=(0-1)" id="result" init="0">
+Applying action
+@v=(0-1)
+Assignment: @v = -1
+
+Process node
+<process action="@v=0" id="stack_pos" init="0">
+Applying action
+@v=0
+Assignment: @v = 0
+
+Process node
+<process action="@v=check" id="node_stack" init="0">
+Applying action
+@v=check
+Resolution: check = 0
+Assignment: @v = 0
+
+Process node
+<process action="@v=(0-1)" id="link_in" init="0">
+Applying action
+@v=(0-1)
+Assignment: @v = -1
+
+Process node
+<process action="@v=0" id="link_out" init="0">
+Applying action
+@v=0
+Assignment: @v = 0
+
+Process node
+<process action="@v=0" id="direction" init="0">
+Applying action
+@v=0
+Assignment: @v = 0
+
+Process node
+<process id="recurse">
+
+Process node
+<process action="@v=node_stack[stack_pos]" id="current_node" init="0">
+Applying action
+@v=node_stack[stack_pos]
+Resolution: stack_pos = 0
+Resolution: node_stack = 0
+Assignment: @v = 0
+
+Process node
+<process action="@v=link_in[stack_pos]" id="current_link_in" init="0">
+Applying action
+@v=link_in[stack_pos]
+Resolution: stack_pos = 0
+Resolution: link_in = -1
+Assignment: @v = -1
+
+Process node
+<process action="@v=link_out[(2 + current_link_in + (8 * current_node))]" id="current_link_out" init="0">
+Applying action
+@v=link_out[(2 + current_link_in + (8 * current_node))]
+Resolution: current_link_in = -1
+Resolution: current_node = 0
+Resolution: link_out = 0
+Assignment: @v = 0
+
+Process node
+<process action="@a[current_node][0][idWrite]" id="write" init="0">
+Applying action
+@a[current_node][0][idWrite]
+Resolution: current_node = 0
+Resolution: @v = 0
+Resolution: @a = 1
+
+Process node
+<process action="result=write" cond="(result < 0) || (result > write)">
+Evaluating condition
+(result < 0) || (result > write)
+Resolution: result = -1
+Evaluated to TRUE
+Applying action
+result=write
+Resolution: write = 5
+Assignment: result = 5
+
+Process node
+<process action="current_channel_out = @oloc[current_node][current_link_out]" cond="(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)">
+Evaluating condition
+(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)
+Resolution: current_link_out = 0
+Resolution: current_node = 0
+Resolution: @olnum = 1
+Resolution: current_link_in = -1
+Resolution: current_node = 0
+Resolution: @ilnum = 0
+Resolution: current_link_out = 0
+Resolution: current_link_in = -1
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos + 1)) + (node_stack[stack_pos] = @oln[current_node][current_link_out]) + (link_in[stack_pos] = @olil[current_node][current_link_out]) + (link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1)) + (direction = 1)" cond="(current_link_out < @olnum[current_node])" config="recurse">
+Evaluating condition
+(current_link_out < @olnum[current_node])
+Resolution: current_link_out = 0
+Resolution: current_node = 0
+Resolution: @olnum = 1
+Evaluated to TRUE
+Applying action
+(stack_pos = (stack_pos + 1)) + (node_stack[stack_pos] = @oln[current_node][current_link_out]) + (link_in[stack_pos] = @olil[current_node][current_link_out]) + (link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1)) + (direction = 1)
+Resolution: stack_pos = 0
+Assignment: stack_pos = 1
+Resolution: current_node = 0
+Resolution: current_link_out = 0
+Resolution: @oln = 1
+Assignment: node_stack[stack_pos] = 1
+Resolution: stack_pos = 1
+Resolution: current_node = 0
+Resolution: current_link_out = 0
+Resolution: @olil = 0
+Assignment: link_in[stack_pos] = 0
+Resolution: stack_pos = 1
+Resolution: current_link_out = 0
+Assignment: link_out[(2+current_link_in+(8*current_node))] = 1
+Resolution: current_link_in = -1
+Resolution: current_node = 0
+Assignment: direction = 1
+
+Process node
+<process action="@v=node_stack[stack_pos]" id="current_node" init="0">
+Applying action
+@v=node_stack[stack_pos]
+Resolution: stack_pos = 1
+Resolution: node_stack = 1
+Assignment: @v = 1
+
+Process node
+<process action="@v=link_in[stack_pos]" id="current_link_in" init="-1">
+Applying action
+@v=link_in[stack_pos]
+Resolution: stack_pos = 1
+Resolution: link_in = 0
+Assignment: @v = 0
+
+Process node
+<process action="@v=link_out[(2 + current_link_in + (8 * current_node))]" id="current_link_out" init="0">
+Applying action
+@v=link_out[(2 + current_link_in + (8 * current_node))]
+Resolution: current_link_in = 0
+Resolution: current_node = 1
+Resolution: link_out = 0
+Assignment: @v = 0
+
+Process node
+<process action="@a[current_node][0][idWrite]" id="write" init="5">
+Applying action
+@a[current_node][0][idWrite]
+Resolution: current_node = 1
+Resolution: @v = 5
+Resolution: @a = 1
+
+Process node
+<process action="result=write" cond="(result < 0) || (result > write)">
+Evaluating condition
+(result < 0) || (result > write)
+Resolution: result = 5
+Resolution: result = 5
+Resolution: write = 5
+Evaluated to FALSE
+
+Process node
+<process action="current_channel_out = @oloc[current_node][current_link_out]" cond="(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)">
+Evaluating condition
+(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)
+Resolution: current_link_out = 0
+Resolution: current_node = 1
+Resolution: @olnum = 2
+Resolution: current_link_in = 0
+Resolution: current_node = 1
+Resolution: @ilnum = 1
+Resolution: current_link_out = 0
+Resolution: current_link_in = 0
+Evaluated to TRUE
+Applying action
+current_channel_out = @oloc[current_node][current_link_out]
+Resolution: current_node = 1
+Resolution: current_link_out = 0
+Resolution: @oloc = 1
+Assignment: current_channel_out = 1
+
+Process node
+<process action="(link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1))" cond="!@ai[current_node][current_link_in][id4]" config="recurse" id="current_channel_out" init="1">
+Evaluating condition
+!@ai[current_node][current_link_in][id4]
+Resolution: current_node = 1
+Resolution: current_link_in = 0
+Resolution: @v = 1
+Resolution: @ai = 1
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos + 1)) + (node_stack[stack_pos] = @oln[current_node][current_link_out]) + (link_in[stack_pos] = @olil[current_node][current_link_out]) + (link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1)) + (direction = 1)" cond="(current_link_out < @olnum[current_node])" config="recurse">
+Evaluating condition
+(current_link_out < @olnum[current_node])
+Resolution: current_link_out = 0
+Resolution: current_node = 1
+Resolution: @olnum = 2
+Evaluated to TRUE
+Applying action
+(stack_pos = (stack_pos + 1)) + (node_stack[stack_pos] = @oln[current_node][current_link_out]) + (link_in[stack_pos] = @olil[current_node][current_link_out]) + (link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1)) + (direction = 1)
+Resolution: stack_pos = 1
+Assignment: stack_pos = 2
+Resolution: current_node = 1
+Resolution: current_link_out = 0
+Resolution: @oln = 3
+Assignment: node_stack[stack_pos] = 3
+Resolution: stack_pos = 2
+Resolution: current_node = 1
+Resolution: current_link_out = 0
+Resolution: @olil = 0
+Assignment: link_in[stack_pos] = 0
+Resolution: stack_pos = 2
+Resolution: current_link_out = 0
+Assignment: link_out[(2+current_link_in+(8*current_node))] = 1
+Resolution: current_link_in = 0
+Resolution: current_node = 1
+Assignment: direction = 1
+
+Process node
+<process action="@v=node_stack[stack_pos]" id="current_node" init="1">
+Applying action
+@v=node_stack[stack_pos]
+Resolution: stack_pos = 2
+Resolution: node_stack = 3
+Assignment: @v = 3
+
+Process node
+<process action="@v=link_in[stack_pos]" id="current_link_in" init="0">
+Applying action
+@v=link_in[stack_pos]
+Resolution: stack_pos = 2
+Resolution: link_in = 0
+Assignment: @v = 0
+
+Process node
+<process action="@v=link_out[(2 + current_link_in + (8 * current_node))]" id="current_link_out" init="0">
+Applying action
+@v=link_out[(2 + current_link_in + (8 * current_node))]
+Resolution: current_link_in = 0
+Resolution: current_node = 3
+Resolution: link_out = 0
+Assignment: @v = 0
+
+Process node
+<process action="@a[current_node][0][idWrite]" id="write" init="5">
+Applying action
+@a[current_node][0][idWrite]
+Resolution: current_node = 3
+Resolution: @v = 5
+Resolution: @a = 1
+
+Process node
+<process action="result=write" cond="(result < 0) || (result > write)">
+Evaluating condition
+(result < 0) || (result > write)
+Resolution: result = 5
+Resolution: result = 5
+Resolution: write = 2
+Evaluated to TRUE
+Applying action
+result=write
+Resolution: write = 2
+Assignment: result = 2
+
+Process node
+<process action="current_channel_out = @oloc[current_node][current_link_out]" cond="(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)">
+Evaluating condition
+(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)
+Resolution: current_link_out = 0
+Resolution: current_node = 3
+Resolution: @olnum = 0
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos + 1)) + (node_stack[stack_pos] = @oln[current_node][current_link_out]) + (link_in[stack_pos] = @olil[current_node][current_link_out]) + (link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1)) + (direction = 1)" cond="(current_link_out < @olnum[current_node])" config="recurse">
+Evaluating condition
+(current_link_out < @olnum[current_node])
+Resolution: current_link_out = 0
+Resolution: current_node = 3
+Resolution: @olnum = 0
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos - 1)) + (direction = (0-1))" cond="(current_link_out >= @olnum[current_node]) && (stack_pos > 0)" config="recurse">
+Evaluating condition
+(current_link_out >= @olnum[current_node]) && (stack_pos > 0)
+Resolution: current_link_out = 0
+Resolution: current_node = 3
+Resolution: @olnum = 0
+Resolution: stack_pos = 2
+Evaluated to TRUE
+Applying action
+(stack_pos = (stack_pos - 1)) + (direction = (0-1))
+Resolution: stack_pos = 2
+Assignment: stack_pos = 1
+Assignment: direction = -1
+
+Process node
+<process action="@v=node_stack[stack_pos]" id="current_node" init="3">
+Applying action
+@v=node_stack[stack_pos]
+Resolution: stack_pos = 1
+Resolution: node_stack = 1
+Assignment: @v = 1
+
+Process node
+<process action="@v=link_in[stack_pos]" id="current_link_in" init="0">
+Applying action
+@v=link_in[stack_pos]
+Resolution: stack_pos = 1
+Resolution: link_in = 0
+Assignment: @v = 0
+
+Process node
+<process action="@v=link_out[(2 + current_link_in + (8 * current_node))]" id="current_link_out" init="0">
+Applying action
+@v=link_out[(2 + current_link_in + (8 * current_node))]
+Resolution: current_link_in = 0
+Resolution: current_node = 1
+Resolution: link_out = 1
+Assignment: @v = 1
+
+Process node
+<process action="@a[current_node][0][idWrite]" id="write" init="2">
+Applying action
+@a[current_node][0][idWrite]
+Resolution: current_node = 1
+Resolution: @v = 2
+Resolution: @a = 1
+
+Process node
+<process action="result=write" cond="(result < 0) || (result > write)">
+Evaluating condition
+(result < 0) || (result > write)
+Resolution: result = 2
+Resolution: result = 2
+Resolution: write = 5
+Evaluated to FALSE
+
+Process node
+<process action="current_channel_out = @oloc[current_node][current_link_out]" cond="(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)">
+Evaluating condition
+(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)
+Resolution: current_link_out = 1
+Resolution: current_node = 1
+Resolution: @olnum = 2
+Resolution: current_link_in = 0
+Resolution: current_node = 1
+Resolution: @ilnum = 1
+Resolution: current_link_out = 1
+Resolution: current_link_in = 0
+Evaluated to TRUE
+Applying action
+current_channel_out = @oloc[current_node][current_link_out]
+Resolution: current_node = 1
+Resolution: current_link_out = 1
+Resolution: @oloc = 0
+Assignment: current_channel_out = 0
+
+Process node
+<process action="(link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1))" cond="!@ai[current_node][current_link_in][id4]" config="recurse" id="current_channel_out" init="0">
+Evaluating condition
+!@ai[current_node][current_link_in][id4]
+Resolution: current_node = 1
+Resolution: current_link_in = 0
+Resolution: @v = 0
+Resolution: @ai = 1
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos + 1)) + (node_stack[stack_pos] = @oln[current_node][current_link_out]) + (link_in[stack_pos] = @olil[current_node][current_link_out]) + (link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1)) + (direction = 1)" cond="(current_link_out < @olnum[current_node])" config="recurse">
+Evaluating condition
+(current_link_out < @olnum[current_node])
+Resolution: current_link_out = 1
+Resolution: current_node = 1
+Resolution: @olnum = 2
+Evaluated to TRUE
+Applying action
+(stack_pos = (stack_pos + 1)) + (node_stack[stack_pos] = @oln[current_node][current_link_out]) + (link_in[stack_pos] = @olil[current_node][current_link_out]) + (link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1)) + (direction = 1)
+Resolution: stack_pos = 1
+Assignment: stack_pos = 2
+Resolution: current_node = 1
+Resolution: current_link_out = 1
+Resolution: @oln = 2
+Assignment: node_stack[stack_pos] = 2
+Resolution: stack_pos = 2
+Resolution: current_node = 1
+Resolution: current_link_out = 1
+Resolution: @olil = 0
+Assignment: link_in[stack_pos] = 0
+Resolution: stack_pos = 2
+Resolution: current_link_out = 1
+Assignment: link_out[(2+current_link_in+(8*current_node))] = 2
+Resolution: current_link_in = 0
+Resolution: current_node = 1
+Assignment: direction = 1
+
+Process node
+<process action="@v=node_stack[stack_pos]" id="current_node" init="1">
+Applying action
+@v=node_stack[stack_pos]
+Resolution: stack_pos = 2
+Resolution: node_stack = 2
+Assignment: @v = 2
+
+Process node
+<process action="@v=link_in[stack_pos]" id="current_link_in" init="0">
+Applying action
+@v=link_in[stack_pos]
+Resolution: stack_pos = 2
+Resolution: link_in = 0
+Assignment: @v = 0
+
+Process node
+<process action="@v=link_out[(2 + current_link_in + (8 * current_node))]" id="current_link_out" init="1">
+Applying action
+@v=link_out[(2 + current_link_in + (8 * current_node))]
+Resolution: current_link_in = 0
+Resolution: current_node = 2
+Resolution: link_out = 0
+Assignment: @v = 0
+
+Process node
+<process action="@a[current_node][0][idWrite]" id="write" init="5">
+Applying action
+@a[current_node][0][idWrite]
+Resolution: current_node = 2
+Resolution: @v = 5
+Resolution: @a = 1
+
+Process node
+<process action="result=write" cond="(result < 0) || (result > write)">
+Evaluating condition
+(result < 0) || (result > write)
+Resolution: result = 2
+Resolution: result = 2
+Resolution: write = 5
+Evaluated to FALSE
+
+Process node
+<process action="current_channel_out = @oloc[current_node][current_link_out]" cond="(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)">
+Evaluating condition
+(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)
+Resolution: current_link_out = 0
+Resolution: current_node = 2
+Resolution: @olnum = 0
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos + 1)) + (node_stack[stack_pos] = @oln[current_node][current_link_out]) + (link_in[stack_pos] = @olil[current_node][current_link_out]) + (link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1)) + (direction = 1)" cond="(current_link_out < @olnum[current_node])" config="recurse">
+Evaluating condition
+(current_link_out < @olnum[current_node])
+Resolution: current_link_out = 0
+Resolution: current_node = 2
+Resolution: @olnum = 0
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos - 1)) + (direction = (0-1))" cond="(current_link_out >= @olnum[current_node]) && (stack_pos > 0)" config="recurse">
+Evaluating condition
+(current_link_out >= @olnum[current_node]) && (stack_pos > 0)
+Resolution: current_link_out = 0
+Resolution: current_node = 2
+Resolution: @olnum = 0
+Resolution: stack_pos = 2
+Evaluated to TRUE
+Applying action
+(stack_pos = (stack_pos - 1)) + (direction = (0-1))
+Resolution: stack_pos = 2
+Assignment: stack_pos = 1
+Assignment: direction = -1
+
+Process node
+<process action="@v=node_stack[stack_pos]" id="current_node" init="2">
+Applying action
+@v=node_stack[stack_pos]
+Resolution: stack_pos = 1
+Resolution: node_stack = 1
+Assignment: @v = 1
+
+Process node
+<process action="@v=link_in[stack_pos]" id="current_link_in" init="0">
+Applying action
+@v=link_in[stack_pos]
+Resolution: stack_pos = 1
+Resolution: link_in = 0
+Assignment: @v = 0
+
+Process node
+<process action="@v=link_out[(2 + current_link_in + (8 * current_node))]" id="current_link_out" init="0">
+Applying action
+@v=link_out[(2 + current_link_in + (8 * current_node))]
+Resolution: current_link_in = 0
+Resolution: current_node = 1
+Resolution: link_out = 2
+Assignment: @v = 2
+
+Process node
+<process action="@a[current_node][0][idWrite]" id="write" init="5">
+Applying action
+@a[current_node][0][idWrite]
+Resolution: current_node = 1
+Resolution: @v = 5
+Resolution: @a = 1
+
+Process node
+<process action="result=write" cond="(result < 0) || (result > write)">
+Evaluating condition
+(result < 0) || (result > write)
+Resolution: result = 2
+Resolution: result = 2
+Resolution: write = 5
+Evaluated to FALSE
+
+Process node
+<process action="current_channel_out = @oloc[current_node][current_link_out]" cond="(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)">
+Evaluating condition
+(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)
+Resolution: current_link_out = 2
+Resolution: current_node = 1
+Resolution: @olnum = 2
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos + 1)) + (node_stack[stack_pos] = @oln[current_node][current_link_out]) + (link_in[stack_pos] = @olil[current_node][current_link_out]) + (link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1)) + (direction = 1)" cond="(current_link_out < @olnum[current_node])" config="recurse">
+Evaluating condition
+(current_link_out < @olnum[current_node])
+Resolution: current_link_out = 2
+Resolution: current_node = 1
+Resolution: @olnum = 2
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos - 1)) + (direction = (0-1))" cond="(current_link_out >= @olnum[current_node]) && (stack_pos > 0)" config="recurse">
+Evaluating condition
+(current_link_out >= @olnum[current_node]) && (stack_pos > 0)
+Resolution: current_link_out = 2
+Resolution: current_node = 1
+Resolution: @olnum = 2
+Resolution: stack_pos = 1
+Evaluated to TRUE
+Applying action
+(stack_pos = (stack_pos - 1)) + (direction = (0-1))
+Resolution: stack_pos = 1
+Assignment: stack_pos = 0
+Assignment: direction = -1
+
+Process node
+<process action="@v=node_stack[stack_pos]" id="current_node" init="1">
+Applying action
+@v=node_stack[stack_pos]
+Resolution: stack_pos = 0
+Resolution: node_stack = 0
+Assignment: @v = 0
+
+Process node
+<process action="@v=link_in[stack_pos]" id="current_link_in" init="0">
+Applying action
+@v=link_in[stack_pos]
+Resolution: stack_pos = 0
+Resolution: link_in = -1
+Assignment: @v = -1
+
+Process node
+<process action="@v=link_out[(2 + current_link_in + (8 * current_node))]" id="current_link_out" init="2">
+Applying action
+@v=link_out[(2 + current_link_in + (8 * current_node))]
+Resolution: current_link_in = -1
+Resolution: current_node = 0
+Resolution: link_out = 1
+Assignment: @v = 1
+
+Process node
+<process action="@a[current_node][0][idWrite]" id="write" init="5">
+Applying action
+@a[current_node][0][idWrite]
+Resolution: current_node = 0
+Resolution: @v = 5
+Resolution: @a = 1
+
+Process node
+<process action="result=write" cond="(result < 0) || (result > write)">
+Evaluating condition
+(result < 0) || (result > write)
+Resolution: result = 2
+Resolution: result = 2
+Resolution: write = 5
+Evaluated to FALSE
+
+Process node
+<process action="current_channel_out = @oloc[current_node][current_link_out]" cond="(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)">
+Evaluating condition
+(current_link_out < @olnum[current_node]) && (current_link_in < @ilnum[current_node]) && (current_link_out >= 0) && (current_link_in >= 0)
+Resolution: current_link_out = 1
+Resolution: current_node = 0
+Resolution: @olnum = 1
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos + 1)) + (node_stack[stack_pos] = @oln[current_node][current_link_out]) + (link_in[stack_pos] = @olil[current_node][current_link_out]) + (link_out[(2 + current_link_in + (8 * current_node))] = (current_link_out + 1)) + (direction = 1)" cond="(current_link_out < @olnum[current_node])" config="recurse">
+Evaluating condition
+(current_link_out < @olnum[current_node])
+Resolution: current_link_out = 1
+Resolution: current_node = 0
+Resolution: @olnum = 1
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos - 1)) + (direction = (0-1))" cond="(current_link_out >= @olnum[current_node]) && (stack_pos > 0)" config="recurse">
+Evaluating condition
+(current_link_out >= @olnum[current_node]) && (stack_pos > 0)
+Resolution: current_link_out = 1
+Resolution: current_node = 0
+Resolution: @olnum = 1
+Resolution: stack_pos = 0
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos - 1)) + (direction = (0-1))" cond="(current_link_out >= @olnum[current_node]) && (stack_pos > 0)" config="recurse">
+Evaluating condition
+(current_link_out >= @olnum[current_node]) && (stack_pos > 0)
+Resolution: current_link_out = 1
+Resolution: current_node = 0
+Resolution: @olnum = 1
+Resolution: stack_pos = 0
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos - 1)) + (direction = (0-1))" cond="(current_link_out >= @olnum[current_node]) && (stack_pos > 0)" config="recurse">
+Evaluating condition
+(current_link_out >= @olnum[current_node]) && (stack_pos > 0)
+Resolution: current_link_out = 1
+Resolution: current_node = 0
+Resolution: @olnum = 1
+Resolution: stack_pos = 0
+Evaluated to FALSE
+
+Process node
+<process action="(stack_pos = (stack_pos - 1)) + (direction = (0-1))" cond="(current_link_out >= @olnum[current_node]) && (stack_pos > 0)" config="recurse">
+Evaluating condition
+(current_link_out >= @olnum[current_node]) && (stack_pos > 0)
+Resolution: current_link_out = 1
+Resolution: current_node = 0
+Resolution: @olnum = 1
+Resolution: stack_pos = 0
+Evaluated to FALSE
+
+Process node
+<process action="@a[@n][0][idAuthority]" id="authority1" init="1">
+Applying action
+@a[@n][0][idAuthority]
+Resolution: @n = 0
+Resolution: @v = 1
+Resolution: @a = 1
+
+Process node
+<process action="c1=0" cond="result < authority1">
+Evaluating condition
+result < authority1
+Resolution: result = 2
+Resolution: authority1 = 3
+Evaluated to TRUE
+Applying action
+c1=0
+Assignment: c1 = 0
+Input
+Cycle in optional
+Input format
+
+Follow in fresh
+Output
+Output format
+*
+Evaluating condition
+c1==1
+Resolution: c1 = 0
+Evaluated to FALSE
+Input
+Cycle in optional
+Input format
+*
+Follow in fresh
+Output
+Output format
+*
+Evaluating condition
+c1==1
+Resolution: c1 = 0
+Evaluated to FALSE
+Failure (final)
+Log closed

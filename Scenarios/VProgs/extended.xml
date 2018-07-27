@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s1" config="c1">Linear prime</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="id1">A particular property</property>
+
+  <configuration id="c1">
+    <component id="c2">
+      <input format=""/>
+      <input format="id1"/>
+      <output format="id1"/>
+      <component>
+        <process id="p1" init="1" action="@=(@+1)"/>
+        <process config="prime" action="p_in=p1"/>
+        <input format="id1"/>
+        <output format="id1" config="c2"/>
+        <output format="" cond="p_out==1"/>
+      </component>
+    </component>
+  </configuration>
+
+  <process id="prime">
+    <process id="p_in" init="0" action="(p_n=1)&amp;&amp;(p_out=0)">
+      <process id="p_out" init="1" cond="(p_in%2)!=0" action="@=1">
+        <process id="p_n" init="1" cond="@&lt;p_in" action="@=(@+1)">
+          <process cond="(p_n&lt;p_in)&amp;&amp;((p_in%p_n)==0)" action="p_out=0"/>
+          <process config="p_out"/>
+        </process>
+      </process>
+    </process>
+  </process>
+
+</compose>

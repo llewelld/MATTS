@@ -1,0 +1,692 @@
+LogFile.txt
+
+      ****** Current component is 0 ******
+Node
+<component>
+
+Process node
+<process action="@ncol[@n][0]">
+Applying action
+@ncol[@n][0]
+Resolution: @n = 0
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=1" id="safe" init="1">
+Applying action
+safe=1
+Assignment: safe = 1
+
+Process node
+<process action="safe=2" cond="@a[@n][idExt]" config="check" init="0">
+Evaluating condition
+@a[@n][idExt]
+Resolution: @n = 0
+Resolution: @v = 0
+Resolution: @a = 0
+Evaluated to FALSE
+Input
+Cycle in optional
+Input format
+
+Follow in fresh
+Evaluating condition
+safe>=1
+Resolution: safe = 1
+Evaluated to TRUE
+Output
+Output format
+*
+Evaluating condition
+safe==1
+Resolution: safe = 1
+Evaluated to TRUE
+Cycle out optional
+Component at end of link is 9
+Follow out fresh
+Recursively calling TestExtended
+
+      ****** Current component is 9 ******
+Node
+<component>
+
+Process node
+<process action="@ncol[@n][0]">
+Applying action
+@ncol[@n][0]
+Resolution: @n = 9
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=1" id="safe" init="1">
+Applying action
+safe=1
+Assignment: safe = 1
+
+Process node
+<process action="safe=2" cond="@a[@n][idExt]" config="check" init="0">
+Evaluating condition
+@a[@n][idExt]
+Resolution: @n = 9
+Resolution: @v = 0
+Resolution: @a = 0
+Evaluated to FALSE
+Input
+Cycle in optional
+Input format
+
+Input links don't match (1 link in)
+Follow in fresh
+Input
+Cycle in optional
+Input format
+*
+Follow in fresh
+Evaluating condition
+safe>=1
+Resolution: safe = 1
+Evaluated to TRUE
+Output
+Output format
+*
+Evaluating condition
+safe==1
+Resolution: safe = 1
+Evaluated to TRUE
+Cycle out optional
+Component at end of link is 5
+Follow out fresh
+Recursively calling TestExtended
+
+      ****** Current component is 5 ******
+Node
+<component>
+
+Process node
+<process action="@ncol[@n][0]">
+Applying action
+@ncol[@n][0]
+Resolution: @n = 5
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=1" id="safe" init="1">
+Applying action
+safe=1
+Assignment: safe = 1
+
+Process node
+<process action="safe=2" cond="@a[@n][idExt]" config="check" init="0">
+Evaluating condition
+@a[@n][idExt]
+Resolution: @n = 5
+Resolution: @v = 0
+Resolution: @a = 0
+Evaluated to FALSE
+Input
+Cycle in optional
+Input format
+
+Input links don't match (1 link in)
+Follow in fresh
+Input
+Cycle in optional
+Input format
+*
+Follow in fresh
+Evaluating condition
+safe>=1
+Resolution: safe = 1
+Evaluated to TRUE
+Output
+Output format
+*
+Evaluating condition
+safe==1
+Resolution: safe = 1
+Evaluated to TRUE
+Cycle out optional
+Component at end of link is 12
+Follow out fresh
+Recursively calling TestExtended
+
+      ****** Current component is 12 ******
+Node
+<component>
+
+Process node
+<process action="@ncol[@n][0]">
+Applying action
+@ncol[@n][0]
+Resolution: @n = 12
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=1" id="safe" init="1">
+Applying action
+safe=1
+Assignment: safe = 1
+
+Process node
+<process action="safe=2" cond="@a[@n][idExt]" config="check" init="0">
+Evaluating condition
+@a[@n][idExt]
+Resolution: @n = 12
+Resolution: @v = 0
+Resolution: @a = 0
+Evaluated to FALSE
+Input
+Cycle in optional
+Input format
+
+Input links don't match (1 link in)
+Follow in fresh
+Input
+Cycle in optional
+Input format
+*
+Follow in fresh
+Evaluating condition
+safe>=1
+Resolution: safe = 1
+Evaluated to TRUE
+Output
+Output format
+*
+Evaluating condition
+safe==1
+Resolution: safe = 1
+Evaluated to TRUE
+Cycle out optional
+Component at end of link is 2
+Follow out fresh
+Recursively calling TestExtended
+
+      ****** Current component is 2 ******
+Node
+<component>
+
+Process node
+<process action="@ncol[@n][0]">
+Applying action
+@ncol[@n][0]
+Resolution: @n = 2
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=1" id="safe" init="1">
+Applying action
+safe=1
+Assignment: safe = 1
+
+Process node
+<process action="safe=2" cond="@a[@n][idExt]" config="check" init="0">
+Evaluating condition
+@a[@n][idExt]
+Resolution: @n = 2
+Resolution: @v = 0
+Resolution: @a = 0
+Evaluated to FALSE
+Input
+Cycle in optional
+Input format
+
+Input links don't match (3 link in)
+Follow in fresh
+Input
+Cycle in optional
+Input format
+*
+Follow in fresh
+Evaluating condition
+safe>=1
+Resolution: safe = 1
+Evaluated to TRUE
+Output
+Output format
+*
+Evaluating condition
+safe==1
+Resolution: safe = 1
+Evaluated to TRUE
+Cycle out optional
+Success
+Component at end of link is 7
+Follow out fresh
+Recursively calling TestExtended
+
+      ****** Current component is 7 ******
+Node
+<component>
+
+Process node
+<process action="@ncol[@n][0]">
+Applying action
+@ncol[@n][0]
+Resolution: @n = 7
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=1" id="safe" init="1">
+Applying action
+safe=1
+Assignment: safe = 1
+
+Process node
+<process action="safe=2" cond="@a[@n][idExt]" config="check" init="0">
+Evaluating condition
+@a[@n][idExt]
+Resolution: @n = 7
+Resolution: @v = 0
+Resolution: @a = 1
+Evaluated to TRUE
+Applying action
+safe=2
+Assignment: safe = 2
+
+Process node
+<process action="@ncol[@n][#00ff00]">
+Applying action
+@ncol[@n][#00ff00]
+Resolution: @n = 7
+Resolution: @ncol = 1
+
+Process node
+<process action="link=@ilnum[@n]">
+Applying action
+link=@ilnum[@n]
+Resolution: @n = 7
+Resolution: @ilnum = 3
+Assignment: link = 3
+
+Process node
+<process id="link" init="3">
+
+Process node
+<process action="link=(link-1)">
+Applying action
+link=(link-1)
+Resolution: link = 3
+Assignment: link = 2
+
+Process node
+<process action="@ncol[@iln[@n][link]][#ff0000]">
+Applying action
+@ncol[@iln[@n][link]][#ff0000]
+Resolution: @n = 7
+Resolution: link = 2
+Resolution: @iln = 12
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=0" cond="(!@a[@iln[@n][link]][idExt]) && (!@ao[@iln[@n][link]][@ilol[@n][link]][idEnc])" init="0">
+Evaluating condition
+(!@a[@iln[@n][link]][idExt]) && (!@ao[@iln[@n][link]][@ilol[@n][link]][idEnc])
+Resolution: @n = 7
+Resolution: link = 2
+Resolution: @iln = 12
+Resolution: @v = 0
+Resolution: @a = 0
+Resolution: @n = 7
+Resolution: link = 2
+Resolution: @iln = 12
+Resolution: @n = 7
+Resolution: link = 2
+Resolution: @ilol = 1
+Resolution: @v = 0
+Resolution: @ao = 1
+Evaluated to FALSE
+
+Process node
+<process cond="link > 0" config="link">
+Evaluating condition
+link > 0
+Resolution: link = 2
+Evaluated to TRUE
+
+Process node
+<process action="link=(link-1)">
+Applying action
+link=(link-1)
+Resolution: link = 2
+Assignment: link = 1
+
+Process node
+<process action="@ncol[@iln[@n][link]][#ff0000]">
+Applying action
+@ncol[@iln[@n][link]][#ff0000]
+Resolution: @n = 7
+Resolution: link = 1
+Resolution: @iln = 3
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=0" cond="(!@a[@iln[@n][link]][idExt]) && (!@ao[@iln[@n][link]][@ilol[@n][link]][idEnc])" init="0 1">
+Evaluating condition
+(!@a[@iln[@n][link]][idExt]) && (!@ao[@iln[@n][link]][@ilol[@n][link]][idEnc])
+Resolution: @n = 7
+Resolution: link = 1
+Resolution: @iln = 3
+Resolution: @v = 0
+Resolution: @a = 0
+Resolution: @n = 7
+Resolution: link = 1
+Resolution: @iln = 3
+Resolution: @n = 7
+Resolution: link = 1
+Resolution: @ilol = 1
+Resolution: @v = 1
+Resolution: @ao = 1
+Evaluated to FALSE
+
+Process node
+<process cond="link > 0" config="link">
+Evaluating condition
+link > 0
+Resolution: link = 1
+Evaluated to TRUE
+
+Process node
+<process action="link=(link-1)">
+Applying action
+link=(link-1)
+Resolution: link = 1
+Assignment: link = 0
+
+Process node
+<process action="@ncol[@iln[@n][link]][#ff0000]">
+Applying action
+@ncol[@iln[@n][link]][#ff0000]
+Resolution: @n = 7
+Resolution: link = 0
+Resolution: @iln = 1
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=0" cond="(!@a[@iln[@n][link]][idExt]) && (!@ao[@iln[@n][link]][@ilol[@n][link]][idEnc])" init="0 1">
+Evaluating condition
+(!@a[@iln[@n][link]][idExt]) && (!@ao[@iln[@n][link]][@ilol[@n][link]][idEnc])
+Resolution: @n = 7
+Resolution: link = 0
+Resolution: @iln = 1
+Resolution: @v = 0
+Resolution: @a = 0
+Resolution: @n = 7
+Resolution: link = 0
+Resolution: @iln = 1
+Resolution: @n = 7
+Resolution: link = 0
+Resolution: @ilol = 0
+Resolution: @v = 0
+Resolution: @ao = 1
+Evaluated to FALSE
+
+Process node
+<process cond="link > 0" config="link">
+Evaluating condition
+link > 0
+Resolution: link = 0
+Evaluated to FALSE
+Input
+Cycle in optional
+Input format
+
+Input links don't match (3 link in)
+Follow in fresh
+Input
+Cycle in optional
+Input format
+*
+Follow in fresh
+Evaluating condition
+safe>=1
+Resolution: safe = 2
+Evaluated to TRUE
+Output
+Output format
+*
+Evaluating condition
+safe==1
+Resolution: safe = 2
+Evaluated to FALSE
+Output
+Output format
+*
+Evaluating condition
+safe==2
+Resolution: safe = 2
+Evaluated to TRUE
+Cycle out optional
+Component at end of link is 8
+Follow out no
+Link success, but not followed
+Success
+Success
+Component at end of link is 11
+Follow out fresh
+Recursively calling TestExtended
+
+      ****** Current component is 11 ******
+Node
+<component>
+
+Process node
+<process action="@ncol[@n][0]">
+Applying action
+@ncol[@n][0]
+Resolution: @n = 11
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=1" id="safe" init="2">
+Applying action
+safe=1
+Assignment: safe = 1
+
+Process node
+<process action="safe=2" cond="@a[@n][idExt]" config="check" init="1">
+Evaluating condition
+@a[@n][idExt]
+Resolution: @n = 11
+Resolution: @v = 1
+Resolution: @a = 0
+Evaluated to FALSE
+Input
+Cycle in optional
+Input format
+
+Input links don't match (3 link in)
+Follow in fresh
+Input
+Cycle in optional
+Input format
+*
+Follow in fresh
+Evaluating condition
+safe>=1
+Resolution: safe = 1
+Evaluated to TRUE
+Output
+Output format
+*
+Evaluating condition
+safe==1
+Resolution: safe = 1
+Evaluated to TRUE
+Cycle out optional
+Success
+Success
+Component at end of link is 10
+Follow out fresh
+Recursively calling TestExtended
+
+      ****** Current component is 10 ******
+Node
+<component>
+
+Process node
+<process action="@ncol[@n][0]">
+Applying action
+@ncol[@n][0]
+Resolution: @n = 10
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=1" id="safe" init="1">
+Applying action
+safe=1
+Assignment: safe = 1
+
+Process node
+<process action="safe=2" cond="@a[@n][idExt]" config="check" init="0">
+Evaluating condition
+@a[@n][idExt]
+Resolution: @n = 10
+Resolution: @v = 0
+Resolution: @a = 0
+Evaluated to FALSE
+Input
+Cycle in optional
+Input format
+
+Input links don't match (1 link in)
+Follow in fresh
+Input
+Cycle in optional
+Input format
+*
+Follow in fresh
+Evaluating condition
+safe>=1
+Resolution: safe = 1
+Evaluated to TRUE
+Output
+Output format
+*
+Evaluating condition
+safe==1
+Resolution: safe = 1
+Evaluated to TRUE
+Cycle out optional
+Component at end of link is 11
+Follow out fresh
+Link success, but not followed
+Success
+Component at end of link is 4
+Follow out fresh
+Recursively calling TestExtended
+
+      ****** Current component is 4 ******
+Node
+<component>
+
+Process node
+<process action="@ncol[@n][0]">
+Applying action
+@ncol[@n][0]
+Resolution: @n = 4
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=1" id="safe" init="1">
+Applying action
+safe=1
+Assignment: safe = 1
+
+Process node
+<process action="safe=2" cond="@a[@n][idExt]" config="check" init="0">
+Evaluating condition
+@a[@n][idExt]
+Resolution: @n = 4
+Resolution: @v = 0
+Resolution: @a = 0
+Evaluated to FALSE
+Input
+Cycle in optional
+Input format
+
+Input links don't match (1 link in)
+Follow in fresh
+Input
+Cycle in optional
+Input format
+*
+Follow in fresh
+Evaluating condition
+safe>=1
+Resolution: safe = 1
+Evaluated to TRUE
+Output
+Output format
+*
+Evaluating condition
+safe==1
+Resolution: safe = 1
+Evaluated to TRUE
+Cycle out optional
+Component at end of link is 11
+Follow out fresh
+Link success, but not followed
+Success
+Success
+Component at end of link is 2
+Follow out fresh
+Link success, but not followed
+Component at end of link is 1
+Follow out fresh
+Recursively calling TestExtended
+
+      ****** Current component is 1 ******
+Node
+<component>
+
+Process node
+<process action="@ncol[@n][0]">
+Applying action
+@ncol[@n][0]
+Resolution: @n = 1
+Resolution: @ncol = 1
+
+Process node
+<process action="safe=1" id="safe" init="1">
+Applying action
+safe=1
+Assignment: safe = 1
+
+Process node
+<process action="safe=2" cond="@a[@n][idExt]" config="check" init="0">
+Evaluating condition
+@a[@n][idExt]
+Resolution: @n = 1
+Resolution: @v = 0
+Resolution: @a = 0
+Evaluated to FALSE
+Input
+Cycle in optional
+Input format
+
+Input links don't match (2 link in)
+Follow in fresh
+Input
+Cycle in optional
+Input format
+*
+Follow in fresh
+Evaluating condition
+safe>=1
+Resolution: safe = 1
+Evaluated to TRUE
+Output
+Output format
+*
+Evaluating condition
+safe==1
+Resolution: safe = 1
+Evaluated to TRUE
+Cycle out optional
+Component at end of link is 7
+Follow out fresh
+Link success, but not followed
+Success
+Success
+Log closed

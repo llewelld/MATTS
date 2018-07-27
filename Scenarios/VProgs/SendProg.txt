@@ -1,0 +1,35 @@
+;---------------------------------------------
+; Program
+	MOV	*length 3
+
+;---------------------------------------------
+; Initialisation loop
+	MOV	*pos text
+	ADD	*finish *pos *length
+
+.initloop1
+	MOV	**pos 1
+	ADD	*pos *pos 1
+	BLT	initloop1 *pos *finish
+
+	MOV	**pos 0
+;---------------------------------------------
+; Main loop
+	MOV	*pos text
+.sendloop1
+	LIB	SendInteger **pos 0
+	ADD	*pos *pos 1
+	BNE	sendloop1 **pos 0
+
+; Send terminating null character
+	LIB	SendInteger **pos 0
+
+; Send another short transmission
+	LIB	SendInteger 1 0
+	LIB	SendInteger 1 0
+	LIB	SendInteger 1 0
+; Send terminating null character
+	LIB	SendInteger 0 0
+
+.end
+;---------------------------------------------

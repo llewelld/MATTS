@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="ReadAccess" config="c1">Read access control check using Sensitivity Levels</sandbox>
+  <property id="Any">Defined to be any property</property>
+  <property id="Write">Level of access written by component (not used)</property>
+  
+
+  <configuration id="c1">
+    <component>
+      <process id="compliant" init="1" action="@v=1"/>
+      <process id="channelNum" init="0" action="@v=0"/>
+           
+      <process id="authority" init="10" action="@a[@n][0][SensitivityLevel]"/>
+      <process config="check" cond="(@olnum[@n] &gt; 0)"/>
+      
+      <input format=""/>
+      <input format="*"/>
+
+      <process action="@ncol[@n][#005555]" cond="compliant != 1"/>
+      <output format="*" config="c1" follow="fresh" cond="compliant == 1"/>
+      <output format="" cond="compliant==1"/>
+    </component>
+  </configuration>
+  <process id="check">
+     <process id="channelId" init="0" action="channelId[channelNum] = @ao[@n][channelNum][ChannelOut]"/>
+     <process id="dataSL" init="10" action="dataSL[channelNum] = @ao[@n][channelNum][SensitivityLevel]"/>
+     
+     <process id="next_node_SL" init="10" action="@a[@oln[@n][channelNum]][0][SensitivityLevel]"/>
+     <process cond="(next_node_SL &gt; dataSL[channelNum]) || (authority &gt; dataSL[channelNum])" action="compliant = 0"/>
+     <process action="@ncol[@oln[@n][channelNum]][#0055ff]" cond="next_node_SL &gt; dataSL[channelNum]"/>
+     <process action="channelNum=(channelNum+1)"/>
+     <process config="check"  cond="channelNum &lt; @olnum[@n]"/>
+  </process>
+
+
+
+</compose>

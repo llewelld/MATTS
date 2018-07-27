@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s2" config="c3">Tree</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="id1">A particular property</property>
+
+  <configuration id="c3">
+    <component id="c4">
+      <input format=""/>
+      <output format="*" cycle="disallow"/>
+      <component>
+        <input format="id1*" cycle="disallow"/>
+        <output config="c4" format="*" cycle="disallow"/>
+        <output format=""/>
+      </component>
+      <component>
+        <input format = "id2*"/>
+        <output format="external"/>
+      </component>
+    </component>
+  </configuration>
+
+
+</compose>

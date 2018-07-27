@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="ReadAccess" config="c1">Read access control check using Sensitivity Levels</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="DataSensitivity">Level of access read by component</property>
+  <property id="Write">Level of access written by component (not used)</property>
+  <property id="SensitivityLevel">Level of access component is authorised to</property>
+
+  <configuration id="c1">
+    <component>
+      <process id="compliant" init="1"/>
+      <process action="@ncol[@n][0]"/>
+      <process id="authority" init="1" action="@a[@n][0][SensitivityLevel]"/>
+      <process config="check" action="check=@n"/>
+      <process cond="result &lt; authority" action="compliant = 0"/>
+
+      <input format=""/>
+      <input format="*"/>
+
+      <process action="@ncol[@n][#005555]" cond="compliant != 1"/>
+      <output format="*" config="c1" follow="fresh" cond="compliant == 1"/>
+      <output format="" cond="compliant==1"/>
+    </component>
+  </configuration>
+
+  <process id="check" init="0">
+    <process id="result" init="0" action="@v=(0-1)"/>
+    <process id="stack_pos" init="0" action="@v=0"/>
+    <process id="node_stack" init="0" action="@v=check"/>
+    <process id="link_stack" init="0" action="@v=0"/>
+    <process id="node_visited" init="0" action="@v=0"/>
+    <process id="recurse">
+      <process id="current_node" init="0" action="@v=node_stack[stack_pos]"/>
+
+      <process id="read" init="0" action="@a[current_node][0][DataSensitivity]"/>
+      <process action="@ncol[current_node][#0055ff]" cond="read &lt; authority"/>
+      <process cond="(result &lt; 0) || (result &gt; read)" action="result=read"/>
+
+      <process id="current_link" init="0" action="@v=link_stack[stack_pos]"/>
+      <process action="node_visited[(current_node + 1)]=1"/>
+      <process id="find_link">
+        <process id="next_node" init="0" action="@v=@iln[current_node][current_link]" cond="current_link &lt; @ilnum[current_node]"/>
+        <process config="find_link" cond="(current_link &lt; @ilnum[current_node]) &amp;&amp; (node_visited[(next_node + 1)]==1)" action="current_link=(current_link+1)"/>
+        <process cond="(current_link &lt; @ilnum[current_node]) &amp;&amp; (node_visited[(next_node + 1)]==0)" action="(link_stack[stack_pos]=(current_link+1)) &amp;&amp; (stack_pos=(stack_pos+1)) &amp;&amp; (node_stack[stack_pos]=next_node) &amp;&amp; (link_stack[stack_pos]=0)" config="recurse"/>
+        <process cond="(current_link &gt;= @ilnum[current_node]) &amp;&amp; (stack_pos &gt;= 0)" action="stack_pos=(stack_pos-1)" config="recurse"/>
+      </process>
+    </process>
+  </process>
+
+
+</compose>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<functy>
+	<settings>
+		<show-axes bool="0"/>
+		<invert bool="0"/>
+		<wireframe bool="0"/>
+	</settings>
+	<range>
+		<min>
+			<coord x="-62.831900" y="-62.831900" z="-62.831900"/>
+		</min>
+		<width>
+			<coord x="125.664000" y="125.664000" z="125.664000"/>
+		</width>
+	</range>
+	<function type="cartesian">
+		<equation>0</equation>
+		<red>0</red>
+		<green>0</green>
+		<blue>0</blue>
+		<alpha>1</alpha>
+		<accuracy double="0.100000"/>
+	</function>
+	<function type="cartesian">
+		<equation>sin(x*2)-0.95</equation>
+		<red>0</red>
+		<green>1</green>
+		<blue>0</blue>
+		<alpha>0.5</alpha>
+		<accuracy double="0.006250"/>
+	</function>
+	<function type="cartesian">
+		<equation>sin(y*2)-0.95</equation>
+		<red>0</red>
+		<green>1</green>
+		<blue>0</blue>
+		<alpha>0.5</alpha>
+		<accuracy double="0.006250"/>
+	</function>
+</functy>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s3" config="c1">Boundary check</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="idExt">External component</property>
+  <property id="idEnc">Encrypted link</property>
+
+  <configuration id="c1" init="1">
+    <component id="c2">
+      <input format=""/>
+      <input format="*"/>
+      <output format="*"/>
+      <component>
+        <process id="safelink" init="1" action="safelink=1"/>
+        <process id="analyse01" init="0" cond="@a[@n][idExt]" config="check"/>
+        <input format="*" cond="safelink==1"/>
+        <output format="*" config="c1"/>
+        <output format=""/>
+      </component>
+    </component>
+  </configuration>
+
+  <process id="check" init="0">
+    <process id="link" init="0" action="link=@ilnum[@n]"/>
+    <process id="link_loop">
+      <process action="link=(link-1)"/>
+      <process id="analyse02" init="0" cond="(!@a[@iln[@n][link]][idExt]) &amp;&amp; (!@ao[@iln[@n][link]][@ilol[@n][link]][idEnc])" action="safelink=0"/>
+      <process cond="link &gt; 0" config="link_loop"/>
+    </process>
+  </process>
+
+</compose>
+

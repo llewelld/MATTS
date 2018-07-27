@@ -1,0 +1,40 @@
+<Compose type="extended" init="0">
+  <Sandbox id="RiskAssessment" config="c1">Risk assessment based on probabilities and asset values</Sandbox>
+  <Property id="Any">Defined to be any property</Property>
+  <Property id="Asset~Value">The value of the asset</Property>
+  <Property id="Risk~Level">The probability of the node being compromised</Property>
+  <Configuration id="c1">
+    <Component init="0">
+      <Process id="compliant" init="1"/>
+      <Process id="value" init="1" action="@a[@n][0][Asset~Value]"/>
+      <Process init="0" action="check=@n" config="check"/>
+      <Process init="0" cond="(value == 0) &amp;&amp; (result &lt; 0.7)" action="compliant = 0"/>
+      <Process init="0" cond="(value == 1) &amp;&amp; (result &lt; 0.5)" action="compliant = 0"/>
+      <Process init="0" cond="(value == 2) &amp;&amp; (result &lt; 0.3)" action="compliant = 0"/>
+      <Input init="0" cycle="optional" follow="fresh"/>
+      <Input init="0" format="*" cycle="optional" follow="fresh"/>
+      <Output init="0" cond="compliant != 0" config="c1" format="*" cycle="optional" follow="fresh"/>
+      <Output init="0" cond="compliant != 0" cycle="optional" follow="fresh"/>
+    </Component>
+  </Configuration>
+  <Process id="check" init="0">
+    <Process id="result" init="0" action="@v=1"/>
+    <Process id="stack_pos" init="0" action="@v=0"/>
+    <Process id="node_stack" init="0" action="@v=check"/>
+    <Process id="link_stack" init="0" action="@v=0"/>
+    <Process id="node_visited" init="0" action="@v=0"/>
+    <Process id="recurse" init="0">
+      <Process id="current_node" init="0" action="@v=node_stack[stack_pos]"/>
+      <Process id="read" init="0" action="@a[current_node][0][Risk~Level]"/>
+      <Process init="0" cond="node_visited[(current_node + 1)] == 0" action="result = (result * (1 - read))"/>
+      <Process id="current_link" init="0" action="@v=link_stack[stack_pos]"/>
+      <Process init="0" action="node_visited[(current_node + 1)]=1"/>
+      <Process id="find_link" init="0">
+        <Process id="next_node" init="0" cond="current_link &lt; @olnum[current_node]" action="@v=@oln[current_node][current_link]"/>
+        <Process init="0" cond="(current_link &lt; @olnum[current_node]) &amp;&amp; (node_visited[(next_node + 1)]==1)" action="current_link=(current_link+1)" config="find_link"/>
+        <Process init="0" cond="(current_link &lt; @olnum[current_node]) &amp;&amp; (node_visited[(next_node + 1)]==0)" action="(link_stack[stack_pos]=(current_link+1)) &amp;&amp; (stack_pos=(stack_pos+1)) &amp;&amp; (node_stack[stack_pos]=next_node) &amp;&amp; (link_stack[stack_pos]=0)" config="recurse"/>
+        <Process init="0" cond="(current_link &gt;= @olnum[current_node]) &amp;&amp; (stack_pos &gt;= 0)" action="stack_pos=(stack_pos-1)" config="recurse"/>
+      </Process>
+    </Process>
+  </Process>
+</Compose>

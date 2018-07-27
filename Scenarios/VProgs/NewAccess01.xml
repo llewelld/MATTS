@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s2" config="c1">Access control check</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="id1">A particular property</property>
+
+  <configuration id="c1">
+    <component id="c2">
+      <input format=""/>
+      <input id="in1" init="0" format="*"/>
+      <output id="out1" init="0" format="*"/>
+      <component>
+        <process config="check"/>
+        <input id="in2" init="0" format="*"/>
+        <output id="out2" init="0" format="*" cond="result==0" config="c2"/>
+        <output format="" cond="result==0"/>
+      </component>
+    </component>
+  </configuration>
+
+  <process id="check">
+    <process id="atcomp" init="0" action="atcomp=@n"/>
+    <process action="link[atcomp]=0"/>
+    <process id="return" init="0"/>
+    <process id="prevlink" init="0"/>
+    <process id="link" init="0">
+
+      <process id="result" init="0" cond="link[atcomp] &lt; @ilnum[atcomp]">
+        <process action="prevlink=link[atcomp]"/>
+        <process action="link[atcomp]=(prevlink+1)"/>
+
+        <process init="0" cond="@ai[atcomp][prevlink][id3]==1" action="result=1"/>
+
+        <process action="return[@iln[atcomp][prevlink]]=atcomp"/>
+        <process action="atcomp=@iln[atcomp][prevlink]"/>
+
+        <process config="link"/>
+      </process>
+
+      <process cond="link[atcomp] &gt;= @ilnum[atcomp]" action="atcomp=@oln[atcomp][link[atcomp]]">
+        <process id="tempcomp" init="0" action="atcomp=return[atcomp]"/>
+        <process cond="tempcomp!=return[atcomp]" config="link"/>
+      </process>
+
+    </process>
+  </process>
+
+</compose>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s3" config="cascade">Cascade vulnerability check</sandbox>
+  <property id="lo">Accredited minimum security level</property>
+  <property id="hi">Accredited maximum security level</property>
+
+  <configuration id="cascade">
+    <component id="path">
+      <input format=""/>
+      <input format="*"/>
+      <process id="N" init="0" action="@v=@r" />
+      <process id="problem" init="0" config="check" />
+      <output format="*" cond="problem==0" config="cascade" />
+      <output format="" cond="problem==0" />
+    </component>
+  </configuration>
+
+  <process id="check">
+    <process id="max" init="0" action="max[N]=max[(N-1)]"/>
+    <process id="min" init="0" action="min[N]=min[(N-1)]"/>
+    <process id="devmin" init="0" action="@a[@n][lo]"/>
+    <process id="devmax" init="0" action="@a[@n][hi]"/>
+    <process id="difficulty" init="0" cond="(devmax-devmin) &gt; @v" action="@v=(devmax-devmin)"/>
+    <process init="0" cond="(devmax &gt; max[N])||(max[N]==0)" action="max[N]=devmax" />
+    <process init="0" cond="(devmin &lt; min[N])||(min[N]==0)" action="min[N]=devmin" />
+    <process init="0" cond="difficulty &lt; (max[N]-min[N])" action="problem=1" />
+  </process>
+
+</compose>

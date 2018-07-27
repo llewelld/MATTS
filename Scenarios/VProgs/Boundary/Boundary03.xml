@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s3" config="c1">Boundary check</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="idExt">External component</property>
+  <property id="idEnc">Encrypted link</property>
+
+  <configuration id="c1" init="1">
+    <component>
+      <process action="@ncol[@n][0]"/>
+      <process id="safe" init="1" action="safe=1"/>
+      <process init="0" cond="@a[@n][idExt]" action="safe=2" config="check"/>
+      <input format="" cond="safe&gt;=1"/>
+      <input format="*" cond="safe&gt;=1"/>
+      <output format="*" config="c1" cond="safe==1"/>
+      <output format="*" follow = "no" cond="safe==2"/>
+      <output format=""/>
+    </component>
+  </configuration>
+
+  <process id="check">
+    <process action="@ncol[@n][#ff0000]"/>
+    <process action="link=@ilnum[@n]"/>
+    <process id="link" init="0">
+      <process action="link=(link-1)"/>
+      <process action="@ncol[@iln[@n][link]][#00ff00]"/>
+      <process init="0" cond="(!@a[@iln[@n][link]][idExt]) &amp;&amp; (!@ao[@iln[@n][link]][@ilol[@n][link]][idEnc])" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      <process cond="link &gt; 0" config="link"/>
+    </process>
+  </process>
+
+</compose>
+

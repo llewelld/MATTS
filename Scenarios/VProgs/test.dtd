@@ -1,0 +1,23 @@
+<!ELEMENT process (#PCDATA | process)*>
+<!ATTLIST process id CDATA #IMPLIED>
+<!ATTLIST process action CDATA #IMPLIED>
+<!ATTLIST process cond CDATA #IMPLIED>
+<!ATTLIST process config CDATA #IMPLIED>
+<!ATTLIST process init CDATA #IMPLIED>
+<!ELEMENT component (#PCDATA | input | output | component | process)*>
+<!ATTLIST component id CDATA #IMPLIED>
+<!ELEMENT input (#PCDATA)>
+<!ATTLIST input format CDATA #IMPLIED>
+<!ELEMENT sandbox (#PCDATA)>
+<!ATTLIST sandbox id CDATA #IMPLIED>
+<!ATTLIST sandbox config CDATA #IMPLIED>
+<!ELEMENT configuration (#PCDATA | component)*>
+<!ATTLIST configuration id CDATA #IMPLIED>
+<!ELEMENT property (#PCDATA)>
+<!ATTLIST property id CDATA #IMPLIED>
+<!ELEMENT compose (#PCDATA | sandbox | property | configuration | process)*>
+<!ATTLIST compose type CDATA #IMPLIED>
+<!ELEMENT output (#PCDATA)>
+<!ATTLIST output format CDATA #IMPLIED>
+<!ATTLIST output cond CDATA #IMPLIED>
+<!ATTLIST output config CDATA #IMPLIED>

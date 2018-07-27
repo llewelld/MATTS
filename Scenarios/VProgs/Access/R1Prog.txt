@@ -1,0 +1,18 @@
+;---------------------------------------------
+; Program
+	MOV	*datapos datain0
+	ADD	*length *datapos 5
+	MOV	*receive0 1
+
+.loop1
+	LIB	ReceiveInteger **datapos *receive0
+	ADD	*datapos *datapos 1
+	BLT	loop1 *datapos *length
+
+	LIB	PrintString *received
+	LIB	PrintInteger *receive0
+	LIB	PrintString *colon
+	LIB	PrintString *datain0
+	LIB	PrintString *newline
+.end
+;---------------------------------------------

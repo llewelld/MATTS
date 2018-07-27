@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s3" config="c1">Boundary check</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="External">External component</property>
+  <property id="idEnc">Encrypted link</property>
+
+  <configuration id="c1" init="1">
+    <component>
+      <process action="@ncol[@n][0]"/>
+      <process id="safe" init="1" action="safe=1"/>
+      <process init="0" cond="@a[@n][External]" action="safe=2" config="check"/>
+      <input format="" cond="safe&gt;=1"/>
+      <input format="*" cond="safe&gt;=1"/>
+      <output format="*" config="c1" cond="safe==1"/>
+      <output format="*" follow = "no" cond="safe==2"/>
+      <output format=""/>
+    </component>
+  </configuration>
+
+  <process id="check">
+    <process action="@ncol[@n][#ff0000]"/>
+    <process action="link=@ilnum[@n]"/>
+    <process id="link" init="0">
+      <process action="link=(link-1)"/>
+      <process action="@ncol[@iln[@n][link]][#00ff00]"/>
+      <process init="0" cond="(!@a[@iln[@n][link]][External]) &amp;&amp; (!@a[@iln[@n][link]][Firewall]) &amp;&amp; (!@a[@iln[@n][link]][IDS])" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      
+      <process id="ex" init="0" action="ex=@a[@iln[@n][link]][External]"/>
+      <process id="sl" init="0" action="sl=@a[@iln[@n][link]][SensitivityLevel]"/>
+      <process id="es" init="0" action="es=@a[@iln[@n][link]][EncryptionStrength]"/>
+      <process id="ss" init="0" action="ss=@a[@iln[@n][link]][StaffSkills]"/>
+
+      <process init="0" cond="(!ex) &amp;&amp; (sl == 0) &amp;&amp; ((es &lt; 11) || (ss &lt; 3))" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      <process init="0" cond="(!ex) &amp;&amp; (sl == 1) &amp;&amp; ((es &lt; 11) || (ss &lt; 3))" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      <process init="0" cond="(!ex) &amp;&amp; (sl == 2) &amp;&amp; ((es &lt; 11) || (ss &lt; 2))" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      <process init="0" cond="(!ex) &amp;&amp; (sl == 3) &amp;&amp; ((es &lt; 8) || (ss &lt; 2))" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      <process init="0" cond="(!ex) &amp;&amp; (sl == 4) &amp;&amp; ((es &lt; 8) || (ss &lt; 2))" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      <process init="0" cond="(!ex) &amp;&amp; (sl == 5) &amp;&amp; ((es &lt; 6) || (ss &lt; 2))" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      <process init="0" cond="(!ex) &amp;&amp; (sl == 6) &amp;&amp; ((es &lt; 6) || (ss &lt; 2))" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      <process init="0" cond="(!ex) &amp;&amp; (sl == 7) &amp;&amp; ((es &lt; 6) || (ss &lt; 1))" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      <process init="0" cond="(!ex) &amp;&amp; (sl == 8) &amp;&amp; ((es &lt; 5) || (ss &lt; 1))" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      <process init="0" cond="(!ex) &amp;&amp; (sl == 9) &amp;&amp; ((es &lt; 5) || (ss &lt; 1))" action="(safe=0) || (@ncol[@iln[@n][link]][#0055ff])"/>
+      
+      <process cond="link &gt; 0" config="link"/>
+    </process>
+  </process>
+
+</compose>
+

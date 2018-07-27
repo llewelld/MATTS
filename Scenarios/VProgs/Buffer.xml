@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<compose type="extended">
+
+  <sandbox id="s1" config="c1">Buffer overun check</sandbox>
+
+  <property id="Any">Defined to be any property</property>
+  <property id="id1">A particular property</property>
+
+  <configuration id="c1">
+    <component id="c2">
+      <input format=""/>
+      <input id="in1" init="0" format="*"/>
+      <output id="out1" init="0" format="*"/>
+      <component>
+        <process config="check"/>
+        <input id="in2" init="0" format="id1*"/>
+        <output id="out2" init="0" format="*" config="c2"/>
+        <output format=""/>
+      </component>
+    </component>
+  </configuration>
+
+  <process id="check">
+    <process action="link=0"/>
+    <process id="link" init="0">
+      <process id="result" init="0" cond="link &lt; @ilnum[@n]" action="@a[@iln[@n][link]][@ilol[@n][link]][id2]">
+        <process action="in2[link]=result[@ilol[@n][link]]"/>
+        <process action="link=(link+1)"/>
+        <process config="link"/>
+      </process>
+    </process>
+  </process>
+
+</compose>

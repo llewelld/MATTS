@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ComposeComposite>
+  <FileHubChunk type="Options">
+    <Options>
+      <MachineLimit type="int">100</MachineLimit>
+      <StackSize type="long">32000</StackSize>
+      <AllowMinimise type="bool">0</AllowMinimise>
+      <AllowAgents type="bool">0</AllowAgents>
+      <AutoCreate type="bool">1</AutoCreate>
+      <AllowControl type="bool">0</AllowControl>
+      <SelectSpeed type="int">500</SelectSpeed>
+      <ColourSpeed type="int">300</ColourSpeed>
+      <RotateHalfLife type="float">0.100000</RotateHalfLife>
+      <RotateSelected type="bool">1</RotateSelected>
+      <SoundVolume type="float">1.000000</SoundVolume>
+      <ScreenshotMode type="bool">0</ScreenshotMode>
+      <Dandelion type="bool">0</Dandelion>
+      <DandelionServer type="string">localhost</DandelionServer>
+      <RecordViewEvents type="bool">1</RecordViewEvents>
+    </Options>
+  </FileHubChunk>
+  <FileHubChunk type="Topology">
+    <Topology>
+      <Camera theta="4.723858" phi="1.570796" psi="0.000000" radius="5.200000"/>
+      <Node>
+        <Id type="int">0</Id>
+        <Position X="1.159982" Y="-0.756045" Z="-0.147359" />
+        <Name type="string">Hospital</Name>
+        <Type type="enum">0</Type>
+        <SensitivityLevel type="int">4</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=5</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">1</Id>
+        <Position X="-0.615746" Y="-0.876583" Z="-0.472383" />
+        <Name type="string">Ambulance Service</Name>
+        <Type type="enum">7</Type>
+        <SensitivityLevel type="int">5</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=9</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">2</Id>
+        <Position X="-0.759890" Y="-0.221454" Z="-0.383628" />
+        <Name type="string">Rescue Team</Name>
+        <Type type="enum">5</Type>
+        <SensitivityLevel type="int">5</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=9</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">3</Id>
+        <Position X="0.047968" Y="-0.279087" Z="-0.356783" />
+        <Name type="string">Police</Name>
+        <Type type="enum">1</Type>
+        <SensitivityLevel type="int">0</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=9</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">4</Id>
+        <Position X="1.294476" Y="0.590558" Z="-0.246106" />
+        <Name type="string">Event Organiser</Name>
+        <Type type="enum">3</Type>
+        <SensitivityLevel type="int">3</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=9</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">5</Id>
+        <Position X="0.043085" Y="0.937814" Z="-0.230858" />
+        <Name type="string">Mobile Operator</Name>
+        <Type type="enum">4</Type>
+        <SensitivityLevel type="int">3</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=9</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">6</Id>
+        <Position X="-1.037957" Y="0.793172" Z="-0.168137" />
+        <Name type="string">Dept of Transport</Name>
+        <Type type="enum">8</Type>
+        <SensitivityLevel type="int">3</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=9</ExtraProperty>
+        <External type="bool">0</External>
+      </Node>
+      <Node>
+        <Id type="int">7</Id>
+        <Position X="-1.910451" Y="-0.058298" Z="-0.257029" />
+        <Name type="string">External Node</Name>
+        <Type type="enum">9</Type>
+        <SensitivityLevel type="int">9</SensitivityLevel>
+        <EncryptionAlgorithm type="string">Unspecified</EncryptionAlgorithm>
+        <StaffSkills type="string">Low</StaffSkills>
+        <Firewall type="bool">0</Firewall>
+        <IDS type="bool">0</IDS>
+        <SecurityMax type="int">0</SecurityMax>
+        <SecurityMin type="int">0</SecurityMin>
+        <ExtraProperty type="string">DataSensitivity=9</ExtraProperty>
+        <External type="bool">1</External>
+      </Node>
+      <Link>
+        <OutId type="int">0</OutId>
+        <InId type="int">4</InId>
+        <LinkId type="int">0</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">2</OutId>
+        <InId type="int">1</InId>
+        <LinkId type="int">10</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">3</OutId>
+        <InId type="int">2</InId>
+        <LinkId type="int">1</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">3</OutId>
+        <InId type="int">0</InId>
+        <LinkId type="int">0</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">4</OutId>
+        <InId type="int">3</InId>
+        <LinkId type="int">5</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">5</OutId>
+        <InId type="int">3</InId>
+        <LinkId type="int">4</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+      <Link>
+        <OutId type="int">6</OutId>
+        <InId type="int">3</InId>
+        <LinkId type="int">3</LinkId>
+        <ChannelOut type="int">0</ChannelOut>
+        <ChannelIn type="int">0</ChannelIn>
+        <OutProperty type="string"></OutProperty>
+        <InProperty type="string"></InProperty>
+        <SecurityLevel type="int">0</SecurityLevel>
+        <Sensitivity type="int">0</Sensitivity>
+      </Link>
+    </Topology>
+  </FileHubChunk>
+  <FileHubChunk type="Compose">
+    <Compose type="extended" init="0">
+      <Sandbox id="ReadAccess" config="c1">Read access control check using Sensitivity Levels</Sandbox>
+      <Property id="Any">Defined to be any property</Property>
+      <Property id="DataSensitivity">Level of access read by component</Property>
+      <Property id="Write">Level of access written by component (not used)</Property>
+      <Property id="SensitivityLevel">Level of access component is authorised to</Property>
+      <Configuration id="c1">
+        <Component init="0">
+          <Process id="compliant" init="1"/>
+          <Process init="0" action="@ncol[@n][0]"/>
+          <Process id="authority" init="1" action="@a[@n][0][SensitivityLevel]"/>
+          <Process init="0" action="check=@n" config="check"/>
+          <Process init="0" cond="result &lt; authority" action="compliant = 0"/>
+          <Input init="0" cycle="optional" follow="fresh"/>
+          <Input init="0" format="*" cycle="optional" follow="fresh"/>
+          <Process init="0" cond="compliant != 1" action="@ncol[@n][#005555]"/>
+          <Output init="0" cond="compliant == 1" config="c1" format="*" cycle="optional" follow="fresh"/>
+          <Output init="0" cond="compliant==1" cycle="optional" follow="fresh"/>
+        </Component>
+      </Configuration>
+      <Process id="check" init="0">
+        <Process id="result" init="0" action="@v=(0-1)"/>
+        <Process id="stack_pos" init="0" action="@v=0"/>
+        <Process id="node_stack" init="0" action="@v=check"/>
+        <Process id="link_stack" init="0" action="@v=0"/>
+        <Process id="node_visited" init="0" action="@v=0"/>
+        <Process id="recurse" init="0">
+          <Process id="current_node" init="0" action="@v=node_stack[stack_pos]"/>
+          <Process id="read" init="0" action="@a[current_node][0][DataSensitivity]"/>
+          <Process init="0" cond="read &lt; authority" action="@ncol[current_node][#0055ff]"/>
+          <Process init="0" cond="(result &lt; 0) || (result &gt; read)" action="result=read"/>
+          <Process id="current_link" init="0" action="@v=link_stack[stack_pos]"/>
+          <Process init="0" action="node_visited[(current_node + 1)]=1"/>
+          <Process id="find_link" init="0">
+            <Process id="next_node" init="0" cond="current_link &lt; @ilnum[current_node]" action="@v=@iln[current_node][current_link]"/>
+            <Process init="0" cond="(current_link &lt; @ilnum[current_node]) &amp;&amp; (node_visited[(next_node + 1)]==1)" action="current_link=(current_link+1)" config="find_link"/>
+            <Process init="0" cond="(current_link &lt; @ilnum[current_node]) &amp;&amp; (node_visited[(next_node + 1)]==0)" action="(link_stack[stack_pos]=(current_link+1)) &amp;&amp; (stack_pos=(stack_pos+1)) &amp;&amp; (node_stack[stack_pos]=next_node) &amp;&amp; (link_stack[stack_pos]=0)" config="recurse"/>
+            <Process init="0" cond="(current_link &gt;= @ilnum[current_node]) &amp;&amp; (stack_pos &gt;= 0)" action="stack_pos=(stack_pos-1)" config="recurse"/>
+          </Process>
+        </Process>
+      </Process>
+    </Compose>
+  </FileHubChunk>
+  <FileHubChunk type="Functy">
+    <functy>
+      <range>
+        <min>
+          <coord x="-26.279720" y="-18.333257" z="-150.000000"/>
+        </min>
+        <width>
+          <coord x="46.609600" y="46.609600" z="300.000000"/>
+        </width>
+      </range>
+      <function type="cartesian">
+        <equation>(10*cos((((x+0)**2)+((y+0)**2))**(1/2))/(((((((x+0)**2)+((y+0)**2))**(1/2))**2)/5)+2))+(15*cos((((x+5)**2)+((y+3)**2))**(1/2))/(((((((x+1)**2)+((y+3)**2))**(1/2))**2)/6)+3))+(18*cos((((x-8)**2)+((y+1)**2))**(1/2))/(((((((x-8)**2)+((y-3)**2))**(1/2))**2)/2)+3))+1.5-(((x**2)+(y**2))/200)</equation>
+        <red>0.050+(z/10)</red>
+        <green>0.337+(z/10)</green>
+        <blue>0.000+(z/10)</blue>
+        <alpha>1.000</alpha>
+        <accuracy double="0.008333"/>
+      </function>
+      <function type="cartesian">
+        <equation>(sin(((t)+y+(cos(x)/2))*2.5)/5)</equation>
+        <red>0.5+(0.1*sin(((t/4)+x+(cos(y)/1.7))/0.3))</red>
+        <green>0.681</green>
+        <blue>0.9</blue>
+        <alpha>0.400</alpha>
+        <accuracy double="0.020000"/>
+      </function>
+    </functy>
+  </FileHubChunk>
+  <FileHubChunk type="Timer">
+    <Timer>
+      <Time type="ulong">132566</Time>
+      <TimerEvent>
+        <start type="ulong">2956</start>
+        <end type="ulong">2956</end>
+        <name type="string">Create node 0</name>
+        <Event type="NewNode">
+          <nodeid type="int">0</nodeid>
+          <nodetype type="int">0</nodetype>
+          <xpos type="float">0.828172</xpos>
+          <ypos type="float">-0.569925</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">9543</start>
+        <end type="ulong">9543</end>
+        <name type="string">Create node 1</name>
+        <Event type="NewNode">
+          <nodeid type="int">1</nodeid>
+          <nodetype type="int">7</nodetype>
+          <xpos type="float">-0.615746</xpos>
+          <ypos type="float">-0.876583</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">12190</start>
+        <end type="ulong">12190</end>
+        <name type="string">Create node 2</name>
+        <Event type="NewNode">
+          <nodeid type="int">2</nodeid>
+          <nodetype type="int">5</nodetype>
+          <xpos type="float">-0.759890</xpos>
+          <ypos type="float">-0.221454</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">14884</start>
+        <end type="ulong">14884</end>
+        <name type="string">Create node 3</name>
+        <Event type="NewNode">
+          <nodeid type="int">3</nodeid>
+          <nodetype type="int">1</nodetype>
+          <xpos type="float">0.047968</xpos>
+          <ypos type="float">-0.279087</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">18219</start>
+        <end type="ulong">18219</end>
+        <name type="string">Create node 4</name>
+        <Event type="NewNode">
+          <nodeid type="int">4</nodeid>
+          <nodetype type="int">3</nodetype>
+          <xpos type="float">0.922734</xpos>
+          <ypos type="float">0.434749</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">21319</start>
+        <end type="ulong">21319</end>
+        <name type="string">Create node 5</name>
+        <Event type="NewNode">
+          <nodeid type="int">5</nodeid>
+          <nodetype type="int">4</nodetype>
+          <xpos type="float">0.004430</xpos>
+          <ypos type="float">0.620228</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">24409</start>
+        <end type="ulong">24409</end>
+        <name type="string">Create node 6</name>
+        <Event type="NewNode">
+          <nodeid type="int">6</nodeid>
+          <nodetype type="int">8</nodetype>
+          <xpos type="float">-0.782834</xpos>
+          <ypos type="float">0.511511</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">26313</start>
+        <end type="ulong">26313</end>
+        <name type="string">Set node 0 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">0</nodeid>
+          <certprops type="string">DataSensitivity=5</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Hospital</name>
+          <sensitivity type="int">4</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">0</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">27585</start>
+        <end type="ulong">27585</end>
+        <name type="string">Set node 1 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">1</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Ambulance Service</name>
+          <sensitivity type="int">5</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">0</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">28582</start>
+        <end type="ulong">28582</end>
+        <name type="string">Set node 3 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">3</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Police</name>
+          <sensitivity type="int">0</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">0</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">29495</start>
+        <end type="ulong">29495</end>
+        <name type="string">Set node 2 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">2</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Rescue Team</name>
+          <sensitivity type="int">5</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">0</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">30424</start>
+        <end type="ulong">30424</end>
+        <name type="string">Set node 4 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">4</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Event Organiser</name>
+          <sensitivity type="int">3</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">0</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">31024</start>
+        <end type="ulong">31024</end>
+        <name type="string">Set node 5 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">5</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Mobile Operator</name>
+          <sensitivity type="int">3</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">0</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">31859</start>
+        <end type="ulong">31859</end>
+        <name type="string">Set node 6 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">6</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Dept of Transport</name>
+          <sensitivity type="int">3</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">0</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">34159</start>
+        <end type="ulong">34159</end>
+        <name type="string">Create link from node 3 to 0</name>
+        <Event type="NewLink">
+          <nodefrom type="int">3</nodefrom>
+          <nodeto type="int">0</nodeto>
+          <linkid type="int">0</linkid>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">36234</start>
+        <end type="ulong">36234</end>
+        <name type="string">Create link from node 3 to 2</name>
+        <Event type="NewLink">
+          <nodefrom type="int">3</nodefrom>
+          <nodeto type="int">2</nodeto>
+          <linkid type="int">1</linkid>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">36928</start>
+        <end type="ulong">36928</end>
+        <name type="string">Create link from node 2 to 1</name>
+        <Event type="NewLink">
+          <nodefrom type="int">2</nodefrom>
+          <nodeto type="int">1</nodeto>
+          <linkid type="int">2</linkid>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">40251</start>
+        <end type="ulong">40251</end>
+        <name type="string">Create link from node 6 to 3</name>
+        <Event type="NewLink">
+          <nodefrom type="int">6</nodefrom>
+          <nodeto type="int">3</nodeto>
+          <linkid type="int">3</linkid>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">41363</start>
+        <end type="ulong">41363</end>
+        <name type="string">Create link from node 5 to 3</name>
+        <Event type="NewLink">
+          <nodefrom type="int">5</nodefrom>
+          <nodeto type="int">3</nodeto>
+          <linkid type="int">4</linkid>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">42813</start>
+        <end type="ulong">42813</end>
+        <name type="string">Create link from node 4 to 3</name>
+        <Event type="NewLink">
+          <nodefrom type="int">4</nodefrom>
+          <nodeto type="int">3</nodeto>
+          <linkid type="int">5</linkid>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">45326</start>
+        <end type="ulong">45326</end>
+        <name type="string">Set node 1 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">1</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Ambulance Service</name>
+          <sensitivity type="int">5</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">1</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">49947</start>
+        <end type="ulong">49947</end>
+        <name type="string">Create link from node 0 to 4</name>
+        <Event type="NewLink">
+          <nodefrom type="int">0</nodefrom>
+          <nodeto type="int">4</nodeto>
+          <linkid type="int">0</linkid>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">53785</start>
+        <end type="ulong">53785</end>
+        <name type="string">Set node 1 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">1</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Ambulance Service</name>
+          <sensitivity type="int">5</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">1</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">55344</start>
+        <end type="ulong">55344</end>
+        <name type="string">Create node 7</name>
+        <Event type="NewNode">
+          <nodeid type="int">7</nodeid>
+          <nodetype type="int">9</nodetype>
+          <xpos type="float">1.825754</xpos>
+          <ypos type="float">1.118440</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">55882</start>
+        <end type="ulong">55882</end>
+        <name type="string">Set node 7 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">7</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">External Node</name>
+          <sensitivity type="int">9</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">1</external>
+          <adhoc type="int">1</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">60130</start>
+        <end type="ulong">60130</end>
+        <name type="string">Set node 1 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">1</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Ambulance Service</name>
+          <sensitivity type="int">5</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">1</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">60840</start>
+        <end type="ulong">60840</end>
+        <name type="string">Set node 7 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">7</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">External Node</name>
+          <sensitivity type="int">9</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">1</external>
+          <adhoc type="int">1</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">61659</start>
+        <end type="ulong">61659</end>
+        <name type="string">Set node 0 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">0</nodeid>
+          <certprops type="string">DataSensitivity=5</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Hospital</name>
+          <sensitivity type="int">4</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">1</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">62368</start>
+        <end type="ulong">62368</end>
+        <name type="string">Set node 5 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">5</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Mobile Operator</name>
+          <sensitivity type="int">3</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">1</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">64897</start>
+        <end type="ulong">64897</end>
+        <name type="string">Set node 1 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">1</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Ambulance Service</name>
+          <sensitivity type="int">5</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">1</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">65606</start>
+        <end type="ulong">65606</end>
+        <name type="string">Set node 0 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">0</nodeid>
+          <certprops type="string">DataSensitivity=5</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Hospital</name>
+          <sensitivity type="int">4</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">1</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">66315</start>
+        <end type="ulong">66315</end>
+        <name type="string">Set node 5 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">5</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">Mobile Operator</name>
+          <sensitivity type="int">3</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">0</external>
+          <adhoc type="int">1</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">66884</start>
+        <end type="ulong">66884</end>
+        <name type="string">Set node 7 properties</name>
+        <Event type="PropertiesNode">
+          <nodeid type="int">7</nodeid>
+          <certprops type="string">DataSensitivity=9</certprops>
+          <secmax type="int">0</secmax>
+          <secmin type="int">0</secmin>
+          <name type="string">External Node</name>
+          <sensitivity type="int">9</sensitivity>
+          <encryptalgorithm type="string">Unspecified</encryptalgorithm>
+          <staffskills type="string">Low</staffskills>
+          <firewall type="int">0</firewall>
+          <ids type="int">0</ids>
+          <external type="int">1</external>
+          <adhoc type="int">1</adhoc>
+          <rangetx type="float">1.200000</rangetx>
+          <rangerx type="float">1.200000</rangerx>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">69281</start>
+        <end type="ulong">71753</end>
+        <name type="string">Change view rotation</name>
+        <Event type="ChangeView">
+          <theta type="float">3.912382</theta>
+          <phi type="float">0.240797</phi>
+          <psi type="float">0.000000</psi>
+          <radius type="float">6.200000</radius>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">74665</start>
+        <end type="ulong">76859</end>
+        <name type="string">Change view rotation</name>
+        <Event type="ChangeView">
+          <theta type="float">4.752389</theta>
+          <phi type="float">1.570796</phi>
+          <psi type="float">0.000000</psi>
+          <radius type="float">6.200000</radius>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">78281</start>
+        <end type="ulong">79653</end>
+        <name type="string">Move node 7</name>
+        <Event type="MoveNode">
+          <nodeid type="int">7</nodeid>
+          <xpos type="float">1.475054</xpos>
+          <ypos type="float">-0.102578</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">80884</start>
+        <end type="ulong">83683</end>
+        <name type="string">Move node 7</name>
+        <Event type="MoveNode">
+          <nodeid type="int">7</nodeid>
+          <xpos type="float">0.219306</xpos>
+          <ypos type="float">-1.507481</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">84777</start>
+        <end type="ulong">87120</end>
+        <name type="string">Move node 7</name>
+        <Event type="MoveNode">
+          <nodeid type="int">7</nodeid>
+          <xpos type="float">-1.761784</xpos>
+          <ypos type="float">-0.293307</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">88620</start>
+        <end type="ulong">89790</end>
+        <name type="string">Move node 7</name>
+        <Event type="MoveNode">
+          <nodeid type="int">7</nodeid>
+          <xpos type="float">-1.479356</xpos>
+          <ypos type="float">-0.907009</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">91209</start>
+        <end type="ulong">92557</end>
+        <name type="string">Change view rotation</name>
+        <Event type="ChangeView">
+          <theta type="float">2.892389</theta>
+          <phi type="float">0.610797</phi>
+          <psi type="float">0.000000</psi>
+          <radius type="float">6.200000</radius>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">92760</start>
+        <end type="ulong">93625</end>
+        <name type="string">Change view zoom</name>
+        <Event type="ChangeView">
+          <theta type="float">2.892389</theta>
+          <phi type="float">0.610797</phi>
+          <psi type="float">0.000000</psi>
+          <radius type="float">4.200000</radius>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">96250</start>
+        <end type="ulong">96250</end>
+        <name type="string">Delete link from node 2 to 1</name>
+        <Event type="DeleteLink">
+          <nodeid type="int">2</nodeid>
+          <linkid type="int">2</linkid>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">100913</start>
+        <end type="ulong">100913</end>
+        <name type="string">Create link from node 2 to 1</name>
+        <Event type="NewLink">
+          <nodefrom type="int">2</nodefrom>
+          <nodeto type="int">1</nodeto>
+          <linkid type="int">10</linkid>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">103107</start>
+        <end type="ulong">105283</end>
+        <name type="string">Change view rotation</name>
+        <Event type="ChangeView">
+          <theta type="float">4.743860</theta>
+          <phi type="float">1.570796</phi>
+          <psi type="float">0.000000</psi>
+          <radius type="float">6.700000</radius>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">104845</start>
+        <end type="ulong">105611</end>
+        <name type="string">Change view zoom</name>
+        <Event type="ChangeView">
+          <theta type="float">4.743860</theta>
+          <phi type="float">1.570796</phi>
+          <psi type="float">0.000000</psi>
+          <radius type="float">6.700000</radius>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">107361</start>
+        <end type="ulong">109014</end>
+        <name type="string">Change view rotation</name>
+        <Event type="ChangeView">
+          <theta type="float">4.723858</theta>
+          <phi type="float">1.570796</phi>
+          <psi type="float">0.000000</psi>
+          <radius type="float">6.700000</radius>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">110405</start>
+        <end type="ulong">111551</end>
+        <name type="string">Move node 7</name>
+        <Event type="MoveNode">
+          <nodeid type="int">7</nodeid>
+          <xpos type="float">-1.910451</xpos>
+          <ypos type="float">-0.058298</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">114020</start>
+        <end type="ulong">114942</end>
+        <name type="string">Change view zoom</name>
+        <Event type="ChangeView">
+          <theta type="float">4.723858</theta>
+          <phi type="float">1.570796</phi>
+          <psi type="float">0.000000</psi>
+          <radius type="float">5.200000</radius>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">121348</start>
+        <end type="ulong">121839</end>
+        <name type="string">Move node 0</name>
+        <Event type="MoveNode">
+          <nodeid type="int">0</nodeid>
+          <xpos type="float">1.159982</xpos>
+          <ypos type="float">-0.756045</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">122511</start>
+        <end type="ulong">122924</end>
+        <name type="string">Move node 4</name>
+        <Event type="MoveNode">
+          <nodeid type="int">4</nodeid>
+          <xpos type="float">1.294476</xpos>
+          <ypos type="float">0.590558</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">123627</start>
+        <end type="ulong">124196</end>
+        <name type="string">Move node 5</name>
+        <Event type="MoveNode">
+          <nodeid type="int">5</nodeid>
+          <xpos type="float">0.043085</xpos>
+          <ypos type="float">0.937814</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+      <TimerEvent>
+        <start type="ulong">124984</start>
+        <end type="ulong">125531</end>
+        <name type="string">Move node 6</name>
+        <Event type="MoveNode">
+          <nodeid type="int">6</nodeid>
+          <xpos type="float">-1.037957</xpos>
+          <ypos type="float">0.793172</ypos>
+          <zpos type="float">0.000000</zpos>
+        </Event>
+      </TimerEvent>
+    </Timer>
+  </FileHubChunk>
+</ComposeComposite>

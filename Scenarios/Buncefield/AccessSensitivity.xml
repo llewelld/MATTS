@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE compose PUBLIC "http://www.cms.livjm.ac.uk/PUCsec/dtds/compose.dtd" "compose.dtd">
+<Compose type="extended" init="0">
+
+  <Sandbox id="ReadAccess" config="c1">Read access control check using Sensitivity Levels</Sandbox>
+
+  <Property id="Any">Defined to be any property</Property>
+  <Property id="Sensitivity">Level of access read by component</Property>
+  <Property id="Write">Level of access written by component (not used)</Property>
+  <Property id="Authorisation">Level of access component is authorised to</Property>
+
+  <Configuration id="c1">
+	<Component init="0">
+	  <Process id="compliant" init="1"/>
+	  <Process init="0" action="@ncol[@n][0]"/>
+	  <Process id="authority" init="1" action="@a[@n][0][Authorisation]"/>
+	  <Process init="0" action="check=@n" config="check"/>
+	  <Process init="0" cond="result &lt; authority" action="compliant = 0"/>
+	  <Input init="0" cycle="optional" follow="fresh"/>
+	  <Input init="0" format="*" cycle="optional" follow="fresh"/>
+	  <Process init="0" cond="compliant != 1" action="@ncol[@n][#005555]"/>
+	  <Output init="0" cond="compliant == 1" config="c1" format="*" cycle="optional" follow="fresh"/>
+	  <Output init="0" cond="compliant==1" cycle="optional" follow="fresh"/>
+	</Component>
+  </Configuration>
+
+  <Process id="check" init="0">
+	<Process id="result" init="0" action="@v=(0-1)"/>
+	<Process id="stack_pos" init="0" action="@v=0"/>
+	<Process id="node_stack" init="0" action="@v=check"/>
+	<Process id="link_stack" init="0" action="@v=0"/>
+	<Process id="node_visited" init="0" action="@v=0"/>
+	<Process id="recurse" init="0">
+	  <Process id="current_node" init="0" action="@v=node_stack[stack_pos]"/>
+	  <Process id="read" init="0" action="@a[current_node][0][Sensitivity]"/>
+	  <Process init="0" cond="read &lt; authority" action="@ncol[current_node][#0055ff]"/>
+	  <Process init="0" cond="(result &lt; 0) || (result &gt; read)" action="result=read"/>
+	  <Process id="current_link" init="0" action="@v=link_stack[stack_pos]"/>
+	  <Process init="0" action="node_visited[(current_node + 1)]=1"/>
+	  <Process id="find_link" init="0" cond="@a[current_node][0][Filter] == 0">
+		<Process id="next_node" init="0" cond="current_link &lt; @ilnum[current_node]" action="@v=@iln[current_node][current_link]"/>
+		<Process init="0" cond="(current_link &lt; @ilnum[current_node]) &amp;&amp; (node_visited[(next_node + 1)]==1)" action="current_link=(current_link+1)" config="find_link"/>
+		<Process init="0" cond="(current_link &lt; @ilnum[current_node]) &amp;&amp; (node_visited[(next_node + 1)]==0)" action="(link_stack[stack_pos]=(current_link+1)) &amp;&amp; (stack_pos=(stack_pos+1)) &amp;&amp; (node_stack[stack_pos]=next_node) &amp;&amp; (link_stack[stack_pos]=0)" config="recurse"/>
+		<Process init="0" cond="(current_link &gt;= @ilnum[current_node]) &amp;&amp; (stack_pos &gt;= 0)" action="stack_pos=(stack_pos-1)" config="recurse"/>
+	  </Process>
+	</Process>
+  </Process>
+
+  </Compose>
